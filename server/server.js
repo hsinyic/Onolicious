@@ -6,13 +6,11 @@ const app = express();
 app.use(express.static(__dirname + '/../client/public'));
 
 app.get('/photos', (req, res) => {
-  // console.log(typeof db.getAllPhotos);
-  res.send(db.getAllPhotos((results) => {
-    console.log('app.get cb', results);
-    return results;
-  }));
+  db.getAllPhotos((results) => {
+    res.send(results);
+  });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 module.exports.app = app;
