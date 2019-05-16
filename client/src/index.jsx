@@ -1,27 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import { placeholder } from '@babel/types';
 
 import PhotoHeader from './components/PhotoHeader.jsx';
 import PhotoCarousel from './components/PhotoCarousel.jsx';
-
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      photos: [],
     }
+  }
+  componentDidMount() {
+    $.get({
+      url: 'http://localhost:3050/photos/',
+      dataType: 'json',
+      success: allPhotos => { this.setState({ photos: allPhotos }) },
+      error: err => { console.log('Failed..', err) },
+    });
   }
 
   render() {
     return (
-      <div>
+      <div onClick={() => console.log(this.state.photos)}>
         <PhotoHeader />
         <PhotoCarousel />
       </div>
-    )
+    );
   }
 }
 
