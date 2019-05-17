@@ -24,7 +24,7 @@ class App extends React.Component {
   render() {
     if (!this.state.isLoading) {
       return (
-        <div onClick={() => console.log(this.state.photos)}>
+        <div>
           <PhotoHeader photos={this.state.photos} />
           <PhotoCarousel photos={this.state.photos} />
         </div>
