@@ -11,6 +11,12 @@ app.get('/photos', (req, res) => {
   });
 });
 
+app.get('/info', (req, res) => {
+  db.getAllInfo((results) => {
+    res.send(results);
+  });
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 module.exports.app = app;

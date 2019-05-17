@@ -12,10 +12,18 @@ connection.connect(err => {
 });
 
 var getAllPhotos = function (callback) {
-  connection.query(`SELECT * FROM photos where id < 3`, (error, results, fields) => {
+  connection.query(`SELECT * FROM photos where id < 10`, (error, results, fields) => {
+    if (error) throw error;
+    callback(results);
+  });
+};
+
+var getAllInfo = function (callback) {
+  connection.query(`SELECT * FROM info ORDER BY RAND() LIMIT 1`, (error, results, fields) => {
     if (error) throw error;
     callback(results);
   });
 };
 
 module.exports.getAllPhotos = getAllPhotos;
+module.exports.getAllInfo = getAllInfo;
