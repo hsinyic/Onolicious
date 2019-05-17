@@ -1,18 +1,15 @@
 import React from 'react';
-import $ from 'jquery';
-
 
 class PhotoHeader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
       photos: [],
     }
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
-    console.log(this.props.photos);
+  handleClick(photo) {
+    console.log('photo clicked');
   }
 
   render() {
@@ -30,9 +27,5 @@ class PhotoHeader extends React.Component {
     )
   }
 }
-
-// {this.props.photos.map(pic => (
-//   <img key={pic.id} style={{ width: 150, height: 150 }} src={pic.url} />
-// ))}
 
 export default PhotoHeader;
