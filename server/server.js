@@ -7,12 +7,14 @@ app.use(express.static(__dirname + '/../client/public'));
 
 app.get('/photos', (req, res) => {
   db.getAllPhotos((results) => {
+    res.status(200);
     res.send(results);
   });
 });
 
 app.get('/info', (req, res) => {
   db.getAllInfo((results) => {
+    res.status(200);
     res.send(results);
   });
 });
