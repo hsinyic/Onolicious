@@ -6,13 +6,13 @@ class PhotoHeader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // isLoading: false,
+
       photos: [],
     }
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    console.log('clicked');
+    console.log(this.props.photos);
   }
 
   render() {

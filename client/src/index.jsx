@@ -22,12 +22,18 @@ class App extends React.Component {
     });
   }
   render() {
-    return (
-      <div onClick={() => console.log(this.state.photos)}>
-        <PhotoHeader />
-        <PhotoCarousel />
-      </div>
-    );
+    if (!this.state.isLoading) {
+      return (
+        <div onClick={() => console.log(this.state.photos)}>
+          <PhotoHeader photos={this.state.photos} />
+          <PhotoCarousel photos={this.state.photos} />
+        </div>
+      );
+    } else {
+      return (
+        <div>Loading...</div>
+      )
+    }
   }
 }
 
