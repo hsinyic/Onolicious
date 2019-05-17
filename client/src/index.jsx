@@ -10,17 +10,17 @@ class App extends React.Component {
     super(props);
     this.state = {
       photos: [],
+      isLoading: true,
     }
   }
   componentDidMount() {
     $.get({
       url: 'http://localhost:3050/photos/',
       dataType: 'json',
-      success: allPhotos => { this.setState({ photos: allPhotos }) },
+      success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
       error: err => { console.log('Failed..', err) },
     });
   }
-
   render() {
     return (
       <div onClick={() => console.log(this.state.photos)}>

@@ -1,0 +1,8 @@
+body {
+  background-color: #2d333f;
+}
+
+.photos {
+  display: grid;
+  height: 434px;
+}
