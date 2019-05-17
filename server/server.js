@@ -6,9 +6,17 @@ const app = express();
 app.use(express.static(__dirname + '/../client/public'));
 
 app.get('/photos', (req, res) => {
-  res.send(db.getAllPhotos((results) => {
-    return results;
-  }));
+  db.getAllPhotos((results) => {
+    res.status(200);
+    res.send(results);
+  });
+});
+
+app.get('/info', (req, res) => {
+  db.getAllInfo((results) => {
+    res.status(200);
+    res.send(results);
+  });
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
