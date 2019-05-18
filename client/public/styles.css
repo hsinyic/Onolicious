@@ -1,8 +1,60 @@
-body {
+.photosHeader {
+  display: grid;
+  position: fixed;
+  top: 118px;
+  right: 0;
+  grid-gap: 4px;
+  grid-template-columns: 142px 142px 142px 142px 142px 142px 142px 142px 142px;
+  grid-template-rows: 142px 142px;
   background-color: #2d333f;
 }
-
-.photos {
-  display: grid;
-  height: 434px;
+.photo {
+  background-color: #2d333f;
+  border-radius: 0px;
+  padding: 0px;
+  font-size: 150%;
+}
+.photoA {
+  grid-row: 1;
+  grid-column: 1;
+}
+.photoB {
+  grid-row: 2;
+  grid-column: 1;
+}
+.photoC {
+  grid-row: 1;
+  grid-column: 2;
+}
+.photoD {
+  grid-row: 1;
+  grid-column: 4;
+}
+.photoE {
+  grid-row: 2;
+  grid-column: 4;
+}
+.photoF {
+  grid-row: 1;
+  grid-column: 5;
+}
+.photoG {
+  grid-row: 1;
+  grid-column: 7;
+}
+.photoH {
+  grid-row: 2;
+  grid-column: 7;
+}
+.photoI {
+  grid-row: 1;
+  grid-column: 8;
+}
+.photoJ {
+  grid-row: 1;
+  grid-column: 10;
+}
+.photoK {
+  grid-row: 2;
+  grid-column: 10;
 }
