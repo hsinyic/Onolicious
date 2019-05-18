@@ -4,7 +4,6 @@ class PhotoCarousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
     }
   }
   render() {
@@ -12,7 +11,7 @@ class PhotoCarousel extends React.Component {
       <div>
         Photo Carousel
       </div>
-    )
+    );
   }
 }
 

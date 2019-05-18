@@ -1,6 +1,11 @@
+body {
+  opacity: 1;  
+  height: 2000px;
+  z-index: 1;
+}
 .photosHeader {
   display: grid;
-  position: fixed;
+  position: absolute;
   top: 118px;
   right: 0;
   grid-gap: 4px;
@@ -13,6 +18,28 @@
   border-radius: 0px;
   padding: 0px;
   font-size: 150%;
+}
+.dimmer {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default - block/none */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+  z-index: 9; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.overlayPic {
+  position: fixed;
+  top: 5%;
+  left: 27.5%;
+  height: 590px;
+  width: 590px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.9);
 }
 .photoA {
   grid-row: 1;
@@ -57,4 +84,8 @@
 .photoK {
   grid-row: 2;
   grid-column: 10;
+}
+.photoZ {
+  grid-row: 3;
+  grid-column: 1;
 }
