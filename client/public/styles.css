@@ -19,7 +19,7 @@ body {
   padding: 0px;
   font-size: 150%;
 }
-.dimmer {
+.photoDimmer {
   position: fixed; /* Sit on top of the page content */
   display: block; /* Hidden by default - block/none */
   width: 100%; /* Full width (cover the whole page) */
@@ -30,7 +30,25 @@ body {
   bottom: 0;
   background-color: rgba(0,0,0,0.9); /* Black background with opacity */
   z-index: 9; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+}
+.overlayExitBtn {
+  position: fixed;
+  line-height: 2;
+  right: 0px;
+  top: 0px;
+  padding: 0px 0px;
+  font-size: 2rem;
+  background-color: transparent;
+	opacity: 0.9;
+  color: gray;
+  border: none;
+  font-size: 60px;
+}
+.overlayExitBtn:focus {
+  outline: none;
+}
+.overlayExitBtn:hover {
+	cursor: pointer;
 }
 .overlayPic {
   position: fixed;
@@ -85,7 +103,11 @@ body {
   grid-row: 2;
   grid-column: 10;
 }
-.photoZ {
+/* .photoL {
+  grid-row: 1;
+  grid-column: 11;
+} */
+/* .photoZ {
   grid-row: 3;
   grid-column: 1;
-}
+} */
