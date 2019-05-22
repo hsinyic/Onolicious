@@ -15,6 +15,24 @@ body {
   grid-template-rows: repeat(2, 142px);
   background-color: #2d333f;
 }
+.btn-save-restaurant {
+  position: absolute;
+  height: 50px;
+  width: 240px;
+  top: 150px;
+  right: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 2px;
+  z-index: 1;
+  color: #2d333f;
+  background-color: #fff;
+  cursor: pointer;
+}
+.btn-save-restaurant:hover {
+  border-color: red;
+}
 .overlayContainer {
   overflow: hidden;
   position: static;
