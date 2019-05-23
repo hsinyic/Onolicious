@@ -9,7 +9,8 @@
     "start": "nodemon server/server.js",
     "react-dev": "webpack -d --watch",
     "seed": "mysql -u root < schema.sql -p",
-    "sql": "mysql -u root -p"
+    "sql": "mysql -u root -p",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -20,9 +21,9 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
-    "jest": "^24.8.0",
     "jquery": "^3.4.1",
     "mysql": "^2.17.1",
+    "puppeteer": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "webpack": "^2.7.0",
@@ -30,6 +31,23 @@
     "webpack-dev-server": "^3.3.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^24.8.0",
+    "jest-css-modules": "^2.0.0",
+    "jest-enzyme": "^7.0.2",
+    "nodemon": "^1.19.0",
+    "react-test-renderer": "^16.8.6"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }

@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 import PhotoHeader from './components/PhotoHeader.jsx';
+import PhotoGrid from './components/PhotoGrid.jsx';
 import PhotoCarousel from './components/PhotoCarousel.jsx';
+import SidebarInfo from './components/SidebarInfo.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       photos: [],
+      info: [],
       isLoading: true,
     }
   }
@@ -26,6 +29,8 @@ class App extends React.Component {
       return (
         <div>
           <PhotoHeader photos={this.state.photos} />
+          <PhotoGrid photos={this.state.photos} />
+          <SidebarInfo info={this.state.info} />
         </div>
       );
     } else {
@@ -37,3 +42,5 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
+export default App;
