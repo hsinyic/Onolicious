@@ -19,7 +19,6 @@ class SidebarInfo extends React.Component {
     });
     console.log(this.state.info);
   }
-
   render() {
     if (this.state.isLoading) {
       return (
