@@ -26,7 +26,6 @@ class App extends React.Component {
       return (
         <div>
           <PhotoHeader photos={this.state.photos} />
-          <PhotoCarousel photos={this.state.photos} />
         </div>
       );
     } else {
