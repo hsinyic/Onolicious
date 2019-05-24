@@ -19,6 +19,13 @@ app.get('/info', (req, res) => {
   });
 });
 
+// app.get('https://www.google.com/maps', (req, res) => {
+//   db.getAllInfo((results) => {
+//     res.status(200);
+//     res.send(results);
+//   });
+// });
+
 app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 module.exports.app = app;

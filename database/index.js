@@ -18,7 +18,7 @@ var getAllPhotos = function (callback) {
 };
 
 var getAllInfo = function (callback) {
-  connection.query(`SELECT * FROM info ORDER BY RAND() LIMIT 1`, (error, results, fields) => {
+  connection.query(`SELECT * FROM info where id < 2`, (error, results, fields) => {
     if (error) throw error;
     callback(results);
   });
