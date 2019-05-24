@@ -296,7 +296,7 @@ body {
   height: 40px;
 }
 .sidebar-info-text-lower {
-  font-weight: 100;
+  font-weight: 150;
 }
 .sidebar-info-view-more {
   color: #da3743;
@@ -304,6 +304,13 @@ body {
   font-weight: 450;
 }
 .sidebar-info-view-more:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.sidebar-info-neighborhood {
+  font-weight: 150;
+}
+.sidebar-info-neighborhood:hover {
   text-decoration: underline;
   cursor: pointer;
 }

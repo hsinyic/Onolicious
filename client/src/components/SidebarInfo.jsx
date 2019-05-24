@@ -68,7 +68,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Neighborhood</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].neighborhood}</div>
+              <div className="sidebar-info-neighborhood">{this.state.info[0].neighborhood}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -168,7 +168,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Neighborhood</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].neighborhood}</div>
+              <div className="sidebar-info-neighborhood">{this.state.info[0].neighborhood}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
