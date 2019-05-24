@@ -21,17 +21,17 @@ DROP TABLE IF EXISTS `info`;
 CREATE TABLE `info` (
   `id` int(9) unsigned NOT NULL AUTO_INCREMENT,
   `address` varchar(255) NOT NULL,
-  `cross-street` varchar(255) NOT NULL,
+  `crossStreet` varchar(255) NOT NULL,
   `neighborhood` varchar(255) NOT NULL,
-  `hours-of-operation` varchar(255) NOT NULL,
+  `hoursOfOperation` varchar(255) NOT NULL,
   `cuisines` varchar(255) NOT NULL,
-  `dining-style` varchar(255) NOT NULL,
-  `dress-code` varchar(255) NOT NULL,
-  `payment-options` varchar(255) NOT NULL,
-  `executive-chef` varchar(255) NOT NULL,
+  `diningStyle` varchar(255) NOT NULL,
+  `dressCode` varchar(255) NOT NULL,
+  `paymentOptions` varchar(255) NOT NULL,
+  `executiveChef` varchar(255) NOT NULL,
   `additional` varchar(255) NOT NULL,
   `website` varchar(255) NOT NULL,
-  `phone-number` varchar(255) NOT NULL,
+  `phoneNumber` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 

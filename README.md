@@ -17,7 +17,7 @@
 
 ## Usage
 
-> Some usage instructions
+> edit database/config.js file by adding your mysql password
 
 ## Requirements
 
@@ -35,9 +35,16 @@ From within the root directory:
 ```sh
 npm install -g webpack
 npm install
-npm start
-npm run react-dev
+```
+
+to seed database run the following
+```
 npm run seed
-npm run sql
+```
+
+to create bundle.js and start the server run the following
+```
+npm run react-dev
+npm start
 ```
 
