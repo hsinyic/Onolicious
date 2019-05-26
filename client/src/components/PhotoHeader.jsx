@@ -108,8 +108,8 @@ class PhotoHeader extends React.Component {
               </div>
             </div>
             <ReportPhotoMenu style={{ zIndex: this.state.reportContainerZ }} clickFlag={() => this.clickFlag()} />
-          </div >
-        </div >
+          </div>
+        </div>
       )
     }
   }
