@@ -37,7 +37,7 @@ class PhotoGrid extends React.Component {
               <img className="photo-grid-list-img" src={this.props.photos[5].url} onClick={() => this.clickPhoto(this.props.photos[5].id)} />
               <img className="photo-grid-list-img" src={this.props.photos[6].url} onClick={() => this.clickPhoto(this.props.photos[6].id)} />
               <img className="photo-grid-list-img" src={this.props.photos[7].url} onClick={() => this.clickPhoto(this.props.photos[7].id)} />
-              <div className="photo-grid-list-img-last-text" onClick={() => this.clickPhoto(this.props.photos[8].id)} >+ {this.props.photos.length - 9} more</div>
+              <div className="photo-grid-list-img-last-text" onClick={() => this.clickPhoto(this.props.photos[8].id)} >+ {this.props.photos.length - 10} more</div>
               <img className="photo-grid-list-img-last-photo" src={this.props.photos[8].url} onClick={() => this.clickPhoto(this.props.photos[8].id)} style={{ height: "100%" }} />
             </div>
           </div>
@@ -61,6 +61,7 @@ class PhotoGrid extends React.Component {
               <img className="photo-grid-list-img" src={this.props.photos[5].url} onClick={() => this.clickPhoto(this.props.photos[5].id)} />
               <img className="photo-grid-list-img" src={this.props.photos[6].url} onClick={() => this.clickPhoto(this.props.photos[6].id)} />
               <img className="photo-grid-list-img" src={this.props.photos[7].url} onClick={() => this.clickPhoto(this.props.photos[7].id)} />
+              <div className="photo-grid-list-img-last-text" onClick={() => this.clickPhoto(this.props.photos[8].id)} >+ {this.props.photos.length - 10} more</div>
               <img className="photo-grid-list-img-last" src={this.props.photos[8].url} onClick={() => this.clickPhoto(this.props.photos[8].id)} />
             </div>
           </div>
