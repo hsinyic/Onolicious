@@ -1,6 +1,7 @@
 import React from 'react';
 import ReportPhotoMenu from './ReportPhotoMenu.jsx';
 import SaveRestaurant from './SaveRestaurant.jsx';
+import PhotoDimmer from './PhotoDimmer.jsx';
 
 class PhotoHeader extends React.Component {
   constructor(props) {
@@ -87,27 +88,7 @@ class PhotoHeader extends React.Component {
             {/* <img className="photo photoL" key={this.props.photos[11].id} src={this.props.photos[11].url} style={{ width: 288, height: 142 }} onClick={() => this.this.clickPhoto(this.props.photos[11].id)} /> */}
           </div>
           <div>
-            <div className="photoDimmer">
-              <img className="overlayPic" src={this.props.photos[this.state.carouselId].url} />
-              <button className="overlayExitBtn" onClick={() => this.clickX()}>
-                <ion-icon name="ios-close"></ion-icon>
-              </button>
-              <button className="overlayLeftBtn" onClick={() => this.clickLeft()}>
-                <ion-icon name="arrow-dropleft"></ion-icon>
-              </button>
-              <button className="overlayRightBtn" onClick={() => this.clickRight()}>
-                <ion-icon name="arrow-dropright"></ion-icon>
-              </button>
-              <svg className="flagPhoto" onClick={() => this.clickFlag()} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path id="_24._Tiny_Flag_Icon" fill="#fff" data-name="24. Tiny Flag Icon" d="M485,475H469v12h-2V463h18l-3,6Zm-16-10v8h13l-2-4,2-4H469Z" transform="translate(-464 -463)"></path></svg>
-              <div className="openTableCircle">
-                <svg height="50" width="50"><circle cx="25" cy="25" fill="#56D7D9" r="25"></circle><text dy=".3em" fill="white" textAnchor="middle" x="50%" y="50%">OT</text></svg>
-                <div>
-                  <strong>OpenTable Diner</strong>
-                  <div>{this.props.photos[this.state.carouselId].timestamp}</div>
-                </div>
-              </div>
-            </div>
-            <ReportPhotoMenu style={{ zIndex: this.state.reportContainerZ }} clickFlag={() => this.clickFlag()} />
+            <PhotoDimmer photos={this.props.photos} id={this.state.carouselId} clickX={this.clickX} />
           </div>
         </div>
       )
