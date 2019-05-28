@@ -20,24 +20,55 @@ body {
   grid-template-rows: repeat(2, 142px);
   background-color: #2d333f;
 }
-.btn-save-restaurant {
+.save-restaurant-container {
   position: absolute;
+  display: block;
   height: 50px;
   width: 240px;
-  top: 150px;
-  right: 30px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+  top: 2rem;
+  right: 2rem;
+}
+.save-restaurant-btn {
+  width: 15rem;
+  border: 1px solid #d8d9db;
+  padding: calc(.75rem - 1px) calc(1rem - 1px);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
   border-radius: 2px;
-  z-index: 1;
+  border-width: 2px;
+  border-color: transparent;
   color: #2d333f;
+  display: inline-block;
   background-color: #fff;
   cursor: pointer;
+  outline: none;
 }
-.btn-save-restaurant:hover {
-  border-color: red;
+.save-restaurant-btn:hover {
+  border-color: #DA3743;
+  cursor: pointer;
+  outline: none;
 }
+.save-restaurant-btn:focus {
+  border-color: #DA3743;
+}
+.save-restaurant-text-container {
+  font-size: 13px;
+  font-weight: 425;
+  line-height: 20px;
+  color: #2d333f;
+  display: flex;
+  justify-content: center;
+}
+.save-restaurant-text {
+  display: flex;
+  margin: 0 0 0 .25rem;
+  justify-content: top;
+  align-items: center;
+}
+
+
+
 
 /* PhotoDimmer */
 .overlay-photoDimmer {

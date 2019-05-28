@@ -48,10 +48,8 @@ class PhotoHeader extends React.Component {
     if (!this.state.showCarousel) {
       return (
         <div>
-          <div>
-            <SaveRestaurant />
-          </div>
           <div className="photosHeader">
+            <SaveRestaurant />
             <img className="photo photoA" key={this.props.photos[0].id} src={this.props.photos[0].url} style={{ width: 142, height: 142 }} onClick={() => this.clickPhoto(this.props.photos[0].id)} />
             <img className="photo photoB" key={this.props.photos[1].id} src={this.props.photos[1].url} style={{ width: 142, height: 142 }} onClick={() => this.clickPhoto(this.props.photos[1].id)} />
             <img className="photo photoC" key={this.props.photos[2].id} src={this.props.photos[2].url} style={{ width: 288, height: 288 }} onClick={() => this.clickPhoto(this.props.photos[2].id)} />
@@ -70,10 +68,8 @@ class PhotoHeader extends React.Component {
     } else {
       return (
         <div>
-          <div>
-            <SaveRestaurant />
-          </div>
           <div className="photosHeader">
+            <SaveRestaurant />
             <img className="photo photoA" key={this.props.photos[0].id} src={this.props.photos[0].url} style={{ width: 142, height: 142 }} onClick={() => this.clickPhoto(this.props.photos[0].id)} />
             <img className="photo photoB" key={this.props.photos[1].id} src={this.props.photos[1].url} style={{ width: 142, height: 142 }} onClick={() => this.clickPhoto(this.props.photos[1].id)} />
             <img className="photo photoC" key={this.props.photos[2].id} src={this.props.photos[2].url} style={{ width: 288, height: 288 }} onClick={() => this.clickPhoto(this.props.photos[2].id)} />
