@@ -1,12 +1,13 @@
-/* @font-face {
-  font-family: "BrandonText";
-  src: url("../../fonts/BrandonText-Medium.otf") format("opentype");
-} */
+@font-face {
+  font-family: "Brandon";
+  src: url("./Brandon.otf") format("opentype");
+}
+
 body {
   opacity: 1;  
   height: 2000px;
   z-index: 1;
-  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-family: Brandon;
 }
 
 .photosHeader {
@@ -82,7 +83,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.9);
-  z-index: 1;
+  z-index: 2;
 }
 .overlay-container {
   position: fixed;
