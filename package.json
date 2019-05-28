@@ -8,12 +8,12 @@
   "scripts": {
     "start": "nodemon server/server.js",
     "react-dev": "webpack -d --watch",
+    "build": "webpack -d",
     "seed": "mysql -u root < schema.sql -p",
     "sql": "mysql -u root -p",
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^6.4.1",
@@ -23,7 +23,6 @@
     "express": "^4.16.4",
     "jquery": "^3.4.1",
     "mysql": "^2.17.1",
-    "puppeteer": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "webpack": "^2.7.0",

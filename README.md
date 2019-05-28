@@ -37,6 +37,7 @@ npm install -g webpack
 npm install
 ```
 
+> edit database/config.js file by adding your mysql password
 to seed database run the following
 ```
 npm run seed
