@@ -2,8 +2,9 @@ const express = require('express');
 const port = 3050;
 const db = require('../database');
 const app = express();
+const path = require('path');
 
-app.use(express.static(__dirname + '/../client/public'));
+app.use(express.static(path.resolve(__dirname, '../client/public')));
 
 app.get('/photos', (req, res) => {
   db.getAllPhotos((results) => {
@@ -17,6 +18,11 @@ app.get('/info', (req, res) => {
     res.status(200);
     res.send(results);
   });
+});
+
+app.get('/', (req, res) => {
+  res.status(200);
+  res.send();
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

@@ -3,6 +3,13 @@
   src: url("./Brandon.otf") format("opentype");
 }
 
+#body {
+  position: absolute;
+  top: 357px;
+  left: 15%;
+  
+}
+
 body {
   opacity: 1;  
   height: 2000px;
@@ -286,11 +293,6 @@ body {
   grid-column: 1;
 } */
 
-.photo-grid-container {
-  display: grid;
-  position: absolute;
-  top: 1000px;
-}
 
 /* sidebar */
 .sidebar-info-container {
@@ -300,18 +302,18 @@ body {
   padding: 4px;
   top: 700px;
   right: 15%;
-  /* height: 100%; */
-  width: 320px;
+  width: 315px;
   border: 2px;
   border-color: black;
-  font-size: 13px;
-  font-weight: 450;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 20px;
 }
 .sidebar-info-map-container {
   display: block;
+  /* align-content: center; */
   border: 1px solid #d8d9db;
-  padding: .25rem .25rem .5rem;
+  padding: .25rem .25rem .5rem .25rem;
   border-radius: 4px;
   margin-bottom: 1rem;
 }
@@ -338,13 +340,17 @@ body {
   height: 40px;
 }
 .sidebar-info-text-lower {
-  font-weight: 100;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 /* photo grid */
 .photo-grid-container {
-  top: 475px;
+  display: grid;
+  position: absolute;
   left: 16.3%;
+  top: 800px;
 }
 .photo-grid-header {
   border-bottom: 1px solid #d8d9db;
@@ -419,7 +425,7 @@ body {
   cursor: pointer;
 }
 .sidebar-info-neighborhood {
-  font-weight: 150;
+  font-size: 13px;
 }
 .sidebar-info-neighborhood:hover {
   text-decoration: underline;
