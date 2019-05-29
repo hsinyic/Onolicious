@@ -1,11 +1,11 @@
 import React from 'react';
 import ReportPhotoMenu from './ReportPhotoMenu.jsx';
+import moment from 'moment';
 
 class PhotoDimmer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      carouselId: null,
       reportContainerZ: 1,
       carouselId: this.props.id,
     }
@@ -16,12 +16,13 @@ class PhotoDimmer extends React.Component {
   clickLeft() {
     if (this.state.carouselId > 0) {
       this.setState({ carouselId: this.state.carouselId - 1 });
-      console.log('current', this.state.carouselId);
+      console.log('current pic id', this.state.carouselId);
     }
   }
   clickRight() {
     // TODO dynamic to pic count
     if (this.state.carouselId < 10) {
+      console.log('current pic id', this.state.carouselId);
       this.setState({ carouselId: this.state.carouselId + 1 });
     }
   }
@@ -48,7 +49,7 @@ class PhotoDimmer extends React.Component {
             <svg height="50" width="50"><circle cx="25" cy="25" fill="#56D7D9" r="25"></circle><text dy=".3em" fill="white" textAnchor="middle" x="50%" y="50%">OT</text></svg>
             <div className="overlay-timestamp-text">
               <strong>OpenTable Diner</strong>
-              <div>Dined on {this.props.photos[this.props.id].timestamp}</div>
+              <div>Dined on {moment(this.props.photos[this.state.carouselId].timestamp).format('MMMM Do YYYY')}</div>
             </div>
           </div>
           <svg className="overlay-flag-photo" onClick={() => this.clickFlag()} width="24" height="24" viewBox="0 0 24 24"><path id="_24._Tiny_Flag_Icon" fill="#fff" data-name="24. Tiny Flag Icon" d="M485,475H469v12h-2V463h18l-3,6Zm-16-10v8h13l-2-4,2-4H469Z" transform="translate(-464 -463)"></path></svg>
