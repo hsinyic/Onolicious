@@ -159,8 +159,8 @@ body {
   position: fixed;
   line-height: 1;
   font-size: 40px;
-  right: 30px;
-  top: 30px;
+  right: 35px;
+  top: 44px;
   background-color: transparent;
 	opacity: 0.9;
   color: #91949a;
@@ -169,8 +169,8 @@ body {
 }
 .overlay-exit-svg {
   position: absolute;
-  top: 30px;
-  right: 0px;
+  /* top: 30px; */
+  /* right: 0px; */
   height: auto;
   width: 200px;
   z-index: 10;
