@@ -90,7 +90,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.9);
-  z-index: 2;
+  z-index: 10;
 }
 .overlay-container {
   position: fixed;
@@ -300,9 +300,9 @@ body {
   flex-direction: column;
   position: absolute;
   padding: 4px;
-  top: 700px;
-  right: 15%;
-  width: 315px;
+  top: 690px;
+  left: 897px;
+  width: 345px;
   border: 2px;
   border-color: black;
   font-size: 14px;
@@ -313,12 +313,14 @@ body {
   display: block;
   /* align-content: center; */
   border: 1px solid #d8d9db;
-  padding: .25rem .25rem .5rem .25rem;
-  border-radius: 4px;
+  padding: 3px 3px 8px 3px;
+  border-radius: 2px;
   margin-bottom: 1rem;
 }
 .sidebar-info-map {
-  margin: 0 0 1rem;
+  width: 328px;
+  height: 193px;
+  margin: 0 0 .75rem;
 }
 .sidebar-info-map-node {
   display: flex;
