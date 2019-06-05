@@ -15,7 +15,7 @@ class SidebarInfo extends React.Component {
   }
   componentDidMount() {
     $.get({
-      url: 'http://localhost:3050/info/',
+      url: 'http://localhost:3050/API/info/' + this.props.id ,
       dataType: 'json',
       success: getInfo => {
         this.setState({

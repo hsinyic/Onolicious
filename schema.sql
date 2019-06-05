@@ -36,6 +36,7 @@ CREATE TABLE `info` (
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
 
 INSERT INTO `photos` (`id`, `restaurant`, `url`, `timestamp`, `unrelated_report`, `inappropriate_report`, `dislike`) VALUES (1, 'Rempel Group', 'https://resizer.otstatic.com/v2/photos/large/24947294.jpg', '1977-02-12', 6, 3, 0);
+INSERT INTO `photos` (`id`, `restaurant`, `url`, `timestamp`, `unrelated_report`, `inappropriate_report`, `dislike`) VALUES (1, 'Rempel Group', 'https://resizer.otstatic.com/v2/photos/large/25897756.jpg', '1977-02-12', 6, 3, 0);
 INSERT INTO `photos` (`id`, `restaurant`, `url`, `timestamp`, `unrelated_report`, `inappropriate_report`, `dislike`) VALUES (2, 'Wolf, Price and Swaniawski', 'https://resizer.otstatic.com/v2/photos/large/25897756.jpg', '2005-07-17', 4, 3, 1);
 INSERT INTO `photos` (`id`, `restaurant`, `url`, `timestamp`, `unrelated_report`, `inappropriate_report`, `dislike`) VALUES (3, 'Hills Inc', 'https://resizer.otstatic.com/v2/photos/large/25897755.jpg', '1978-12-04', 8, 9, 0);
 INSERT INTO `photos` (`id`, `restaurant`, `url`, `timestamp`, `unrelated_report`, `inappropriate_report`, `dislike`) VALUES (4, 'Towne, Robel and Lueilwitz', 'https://resizer.otstatic.com/v2/photos/large/25897754.jpg', '1978-04-14', 6, 0, 0);

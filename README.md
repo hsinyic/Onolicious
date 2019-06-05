@@ -49,3 +49,30 @@ npm run react-dev
 npm start
 ```
 
+
+
+### API Routes ### 
+| TYPE | ROUTE | DESCRIPTION |
+|------|------|--------|
+| GET |  /API/info/:id   | Returns JSON and 200 response
+| GET |   /API/photos/:id  | Returns JSON and 200 response
+| POST |  /API/info/:id | Returns JSON and 201 response
+| POST | /API/photos/:id| Returns JSON and 201 response
+| UPDATE |/API/info/:id | Returns JSON and 201 response
+| UPDATE |/API/photos/:id | Returns JSON and 201 response
+|  DELETE |/API/info/:id | Remove entry and return 204 response
+|  DELETE | /API/photos/:id| Remove entry and return 204 response
+
+
+
+### Example API request ### 
+
+```
+    $.get({
+      url: 'http://localhost:3050/API/photos/' + id,
+      dataType: 'json',
+      success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
+      error: err => { console.log('Failed..', err) },
+    });
+
+```

@@ -11,6 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: window.location.pathname.split('/overviews/')[1],
       photos: [],
       info: [],
       isLoading: true,
@@ -18,7 +19,7 @@ class App extends React.Component {
   }
   componentDidMount() {
     $.get({
-      url: 'http://localhost:3050/photos/',
+      url: 'http://localhost:3050/API/photos/' + id,
       dataType: 'json',
       success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
       error: err => { console.log('Failed..', err) },
@@ -28,7 +29,7 @@ class App extends React.Component {
     if (!this.state.isLoading) {
       return (
         <div>
-          <PhotoHeader photos={this.state.photos} />
+          <PhotoHeader photos={this.state.photos} id={this.props.id} />
           <PhotoGrid photos={this.state.photos} />
           <SidebarInfo info={this.state.info} />
         </div>
