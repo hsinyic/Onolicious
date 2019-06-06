@@ -26,6 +26,13 @@ app.get('/API/info/:id', (req, res) => {
 
 app.post('/API/info/:id', (req, res) => {
   var index = req.params.id;
+  db.crudFxn.getPhoto(index, (err, results) => {
+    if (err){
+      res.status(505);
+    }
+    res.status(200);
+    res.send(results);
+  });
   res.status(200);
   res.send();
 });
