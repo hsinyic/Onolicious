@@ -197,7 +197,7 @@ Obtain information about the restaurants
   `id` is padded by 0's and it has a total of 9-12 digits 
 * **Success Response:**
   * **Code:** 200 <br />
-    **Content:** `
+    **Content:** ```
     [{
   id: '000000000009',
   photo: 'https://s3-us-west-1.amazonaws.com/asyncphotos/3.jpg',
@@ -254,7 +254,7 @@ Obtain information about the restaurants
   flagged: true
 }
 ]
-`
+```
 
 * **Error Response:**
 
@@ -295,7 +295,7 @@ Obtain information about the restaurants
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `
+    **Content:** ```
     {
   id: '000000000007',
   address: '56119 Ziemann Loop',
@@ -312,7 +312,7 @@ Obtain information about the restaurants
   additional: 'Aut deserunt cupiditate enim eum accusantium expedita.',
   website: 'http://rosemary.net',
   phoneNumber: '905-430-9905' }
-`
+```
     
  
 * **Error Response:**
@@ -343,8 +343,7 @@ Obtain information about the restaurants
   
   
   
-  
-  
+
 
 **POST info**
 Post new restaurant(s)
@@ -369,7 +368,7 @@ Post new restaurant(s)
 
 * **Sample Call:**
 
-`$.post({
+```$.post({
       url: 'http://localhost:3050/API/photos/000000001' ,
       dataType: 'json',
       data:  {
@@ -391,7 +390,7 @@ Post new restaurant(s)
             success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
             error: err => { console.log('Failed..', err) },
     });
-    `
+```
 
 
 **POST photo**
@@ -417,7 +416,7 @@ Obtain information about the restaurants
 
 * **Sample Call:**
 
-`$.post({
+```$.post({
       url: 'http://localhost:3050/API/photo/000000001' ,
       dataType: 'json',
       data: 
@@ -471,7 +470,7 @@ Obtain information about the restaurants
       success: info => { console.log('Successfully posted photo') },
       error: err => { console.log('Failed..', err) },
     });
-`
+```
 
 
 * **Notes:**
