@@ -563,8 +563,7 @@ Update photo of a particular restaurant
 
 
 * **Sample Call:**
-  ```
-  $.update({
+  ```$.update({
       url: 'http://localhost:3050/API/photo/000000001' ,
       dataType: 'json',
       data: 
@@ -618,7 +617,7 @@ Update photo of a particular restaurant
       success: info => { console.log('Successfully posted photo') },
       error: err => { console.log('Failed..', err) },
     });
-```
+  ```
 
 
 * **Notes:**
