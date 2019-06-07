@@ -624,3 +624,88 @@ Update photo of a particular restaurant
 * **Notes:**
 
   Simply overwrites the photo record 
+  
+  
+  
+  
+
+**DELETE info**
+delete restaurant(s) info
+* **/API/info/:id**
+* **Method:**
+  
+  `DELETE`
+*  **URL Params**
+  `id` is padded by 0's and it has a total of 9-12 digits 
+* **Success Response:**
+  * **Code:** 204 <br />
+
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "Log in" }`
+
+  OR
+
+  * **Code:** 422 UNPROCESSABLE ENTRY <br />
+    **Content:** `{ error : "invalid ID" }`
+
+* **Sample Call:**
+
+```$.delete({
+      url: 'http://localhost:3050/API/photos/000000001' ,
+      dataType: 'json',
+      data:  {
+        ['000000000007','000000000008','000000000009','0000000000010' ]},
+      success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
+      error: err => { console.log('Failed..', err) },
+    });
+```
+
+
+* **Notes:**
+
+  Simply send the restaurant ID for deletion; TBD -- whether I should delete the photo as well   
+
+**DELETE photo**
+DELETE particular photo of a particular restaurant
+* **/API/photo/:id**
+* **Method:**
+  `UPDATE`
+*  **URL Params**
+  `id` is padded by 0's and it has a total of 9-12 digits 
+* **Success Response:**
+  * **Code:** 204 <br />
+    **Content:** 
+
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "Log in" }`
+
+  OR
+
+  * **Code:** 422 UNPROCESSABLE ENTRY <br />
+    **Content:** `{ error : "id invalid" }`
+
+
+
+
+* **Sample Call:**
+
+```$.delete({
+      url: 'http://localhost:3050/API/photo/000000001' ,
+      dataType: 'json',
+      data: { 
+          {resid:'000000000007','000000000008','000000000009','0000000000010'},
+          {id:'0035670000007','000002750008','024780000009'} },
+      success: info => { console.log('Successfully posted photo') },
+      error: err => { console.log('Failed..', err) },
+    });
+```
+
+
+* **Notes:**
+
+  Photo can be deleted by restaurant and by photoID themselves  
+
