@@ -389,9 +389,9 @@ Post new restaurant(s)
             executiveChef: 'Zoey Bechtelar',
             additional: 'Aut deserunt cupiditate enim eum accusantium expedita.',
             website: 'http://rosemary.net',
-            phoneNumber: '905-430-9905' }
-                success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
-                error: err => { console.log('Failed..', err) },
+            phoneNumber: '905-430-9905' },
+            success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
+            error: err => { console.log('Failed..', err) },
         });
     ```
 
@@ -509,7 +509,7 @@ Update restaurant(s) info
 
 * **Sample Call:**
 
-```$.post({
+```$.update({
       url: 'http://localhost:3050/API/photos/000000001' ,
       dataType: 'json',
       data:  {
@@ -527,9 +527,9 @@ Update restaurant(s) info
         executiveChef: 'Zoey Bechtelar',
         additional: 'Aut deserunt cupiditate enim eum accusantium expedita.',
         website: 'http://rosemary.net',
-        phoneNumber: '905-430-9905' }
-            success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
-            error: err => { console.log('Failed..', err) },
+        phoneNumber: '905-430-9905' },
+        success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
+        error: err => { console.log('Failed..', err) },
     });
 ```
 
@@ -564,7 +564,7 @@ Update photo of a particular restaurant
 
 * **Sample Call:**
 
-```$.post({
+```$.update({
       url: 'http://localhost:3050/API/photo/000000001' ,
       dataType: 'json',
       data: 
