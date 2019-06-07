@@ -531,7 +531,7 @@ Update restaurant(s) info
           success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
           error: err => { console.log('Failed..', err) },
       });
-```
+  ```
 
 
 * **Notes:**
