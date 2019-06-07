@@ -3,12 +3,16 @@ const fs = require('fs');
 const data = require('./data.js');
 var photoRecord = [];
 var infoRecord = [];
-var nRecords = 10 ** 6;
+var nRecords = Math.floor(10 ** 6/3);
 var diningStyle = data.diningStyle;
 var diningStyleL = diningStyle.length;
 var paymentOptions = data.paymentOptions;
 var photoLink = data.photo;
+
 var photoL = photoLink.length;
+var columnD = '","';
+let writeStreamPhoto = fs.createWriteStream('photo.csv');
+let writeStreamInfo = fs.createWriteStream('info.csv');
 
 var RestaurantInstance = function (n) {
   this.id = n.toString().padStart(12, '0');
@@ -29,30 +33,44 @@ var RestaurantInstance = function (n) {
   this.phoneNumber = faker.phone.phoneNumberFormat().slice(0, 12);
 };
 
-var PhotoInstance = function (n) {
-  this.id = n.toString().padStart(12, '0');
+var PhotoInstance = function (n, photocount) {
+  this.id = photocount;
+  this.resid = n.toString().padStart(12, '0');
   this.photo = photoLink[Math.floor(Math.random() * photoL)];
   this.user = faker.internet.userName();
-  this.date_posted = faker.date.past();
-  this.flagged = Math.random() > 0.01 ? true : false;
+  this.date_posted = String(faker.date.past());
+  this.flagged = Math.random() > 0.01 ? 0 : 1;
 }
 
 
 var count = new Array(nRecords).fill(0)
+var photocount = 0
 count.forEach((val, i) => {
   var restaurant = new RestaurantInstance(i);
   var numOfPhotos = 15 + Math.random() * 20;
   for (var j = 0; j < numOfPhotos; j++) {
-    photoRecord.push(new PhotoInstance(i));
+    var photo = new PhotoInstance(i, photocount);
+    var photoString = ""
+    if (j === 0 && i === 0) {
+      var keys = '"' + Object.keys(photo).join(columnD) + '"\n';
+      photoString += keys;
+    }
+    var values = '"' + Object.values(photo).join(columnD) + '"\n'
+    photoString += values
+    photocount++;
+    writeStreamPhoto.write(photoString)
   }
-  infoRecord.push(restaurant);
-  if (i % 10 ** 4 == 0) {
+  if (i === 0) {
+    writeStreamInfo.write(Object.keys(restaurant).join(columnD) + '"\n');
+  }
+  if (i % 10 ** 5 == 0) {
     console.log(i / nRecords);
   }
-
+  writeStreamInfo.write(Object.values(restaurant).join(columnD) + '"\n');
 })
-
-
+writeStreamInfo.end();
+writeStreamPhoto.end();
+/* 
 function csvConvert(data) {
   var result, ctr, keys, columnD, lineD;
   columnD = ',';
@@ -89,29 +107,30 @@ fs.writeFile('info.js', csvConvert(infoRecord), (err, success) => {
     console.log('successfully generated infoRecord')
   }
 })
+ */
 
 
+//  #######
+// let writeStream = fs.createWriteStream('example.csv');
 
-let writeStream = fs.createWriteStream('photo.csv');
-// write some data with a base64 encoding
-writeStream.write('aef35ghhjdk74hja83ksnfjk888sfsf', ',', 'base64');
-var nColumns = 10
-for (let i = 0; i < 100; i++) {
-  const element = Math.random().toString();
-  writeStream.write(element);
-  if (i % 10 === nColumns - 1) {
-    writeStream.write('\n')
-  } else {
-    writeStream.write(',')
-  }
-}
-// the finish event is emitted when all data has been flushed from the stream
-writeStream.on('finish', () => {
-  console.log('wrote all data to file');
-});
+// // write some data with a base64 encoding
+// var nColumns = 10
+// for (let i = 0; i < 100; i++) {
+//   const element = Math.random().toString();
+//   writeStream.write(element);
+//   if (i % 10 === nColumns - 1) {
+//     writeStream.write('\n')
+//   } else {
+//     writeStream.write(',')
+//   }
+// }
+// // the finish event is emitted when all data has been flushed from the stream
+// writeStream.on('finish', () => {
+//   console.log('wrote all data to file');
+// });
 
-// close the stream
-writeStream.end();
+// // close the stream
+// writeStream.end();
 
 
 
@@ -145,3 +164,9 @@ writeStream.end();
 
 //     })
 //   )
+
+
+
+
+
+
