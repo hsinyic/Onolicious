@@ -298,24 +298,24 @@ Obtain information about the restaurants
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** ```
-    {
-  id: '000000000007',
-  address: '56119 Ziemann Loop',
-  crossStreet: 'Greenfelder Valleys',
-  neighborhood: 'Pamelashire',
-  cuisines: 'Hertha Stravenue',
-  diningStyle: 'Tie and Suit',
-  dressCode: 'Tie and Suit',
-  paymentOptions: '',
-  chef: 'Lonie Gutmann',
-  catering: 'Qui libero quia in ipsum eveniet veritatis eos aut. Nam est et voluptatem iste ipsam est similique inventore. Fuga rem sint odit temporibus corporis. Deleniti est iusto sed reprehenderit dolores ad est necessitatibus unde. Et id blanditiis ex enim praesentium laudantium.\n \rEst quia odio sapiente ipsa qui pariatur vero dolorum. Consequuntur odio qui laudantium sequi sint eius dolores. Doloremque quae consequuntur ratione quia et cumque id aut.\n \rAut explicabo voluptatem maiores dicta. Explicabo aliquam soluta cupiditate fugit nulla magni velit. Quibusdam quia velit iure sunt iure illum autem quidem sed.',
-  privatePartyContact: 'Lon Gleason: 240-367-5375',
-  executiveChef: 'Zoey Bechtelar',
-  additional: 'Aut deserunt cupiditate enim eum accusantium expedita.',
-  website: 'http://rosemary.net',
-  phoneNumber: '905-430-9905' }
-```
+    **Content:** 
+    ```{
+      id: '000000000007',
+      address: '56119 Ziemann Loop',
+      crossStreet: 'Greenfelder Valleys',
+      neighborhood: 'Pamelashire',
+      cuisines: 'Hertha Stravenue',
+      diningStyle: 'Tie and Suit',
+      dressCode: 'Tie and Suit',
+      paymentOptions: '',
+      chef: 'Lonie Gutmann',
+      catering: 'Qui libero quia in ipsum eveniet veritatis eos aut. Nam est et voluptatem iste ipsam est similique inventore. Fuga rem sint odit temporibus corporis. Deleniti est iusto sed reprehenderit dolores ad est necessitatibus unde. Et id blanditiis ex enim praesentium laudantium.\n \rEst quia odio sapiente ipsa qui pariatur vero dolorum. Consequuntur odio qui laudantium sequi sint eius dolores. Doloremque quae consequuntur ratione quia et cumque id aut.\n \rAut explicabo voluptatem maiores dicta. Explicabo aliquam soluta cupiditate fugit nulla magni velit. Quibusdam quia velit iure sunt iure illum autem quidem sed.',
+      privatePartyContact: 'Lon Gleason: 240-367-5375',
+      executiveChef: 'Zoey Bechtelar',
+      additional: 'Aut deserunt cupiditate enim eum accusantium expedita.',
+      website: 'http://rosemary.net',
+      phoneNumber: '905-430-9905' }
+    ```
     
  
 * **Error Response:**
@@ -371,29 +371,29 @@ Post new restaurant(s)
 
 * **Sample Call:**
 
-```$.post({
-      url: 'http://localhost:3050/API/photos/000000001' ,
-      dataType: 'json',
-      data:  {
-        id: '000000000007',
-        address: '56119 Ziemann Loop',
-        crossStreet: 'Greenfelder Valleys',
-        neighborhood: 'Pamelashire',
-        cuisines: 'Hertha Stravenue',
-        diningStyle: 'Tie and Suit',
-        dressCode: 'Tie and Suit',
-        paymentOptions: '',
-        chef: 'Lonie Gutmann',
-        catering: 'Qui libero quia in ipsum eveniet veritatis eos aut. Nam est et voluptatem iste ipsam est similique inventore. Fuga rem sint odit temporibus corporis. Deleniti est iusto sed reprehenderit dolores ad est necessitatibus unde. Et id blanditiis ex enim praesentium laudantium.\n \rEst quia odio sapiente ipsa qui pariatur vero dolorum. Consequuntur odio qui laudantium sequi sint eius dolores. Doloremque quae consequuntur ratione quia et cumque id aut.\n \rAut explicabo voluptatem maiores dicta. Explicabo aliquam soluta cupiditate fugit nulla magni velit. Quibusdam quia velit iure sunt iure illum autem quidem sed.',
-        privatePartyContact: 'Lon Gleason: 240-367-5375',
-        executiveChef: 'Zoey Bechtelar',
-        additional: 'Aut deserunt cupiditate enim eum accusantium expedita.',
-        website: 'http://rosemary.net',
-        phoneNumber: '905-430-9905' }
-            success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
-            error: err => { console.log('Failed..', err) },
-    });
-```
+  ```$.post({
+          url: 'http://localhost:3050/API/photos/000000001' ,
+          dataType: 'json',
+          data:  {
+            id: '000000000007',
+            address: '56119 Ziemann Loop',
+            crossStreet: 'Greenfelder Valleys',
+            neighborhood: 'Pamelashire',
+            cuisines: 'Hertha Stravenue',
+            diningStyle: 'Tie and Suit',
+            dressCode: 'Tie and Suit',
+            paymentOptions: '',
+            chef: 'Lonie Gutmann',
+            catering: 'Qui libero quia in ipsum eveniet veritatis eos aut. Nam est et voluptatem iste ipsam est similique inventore. Fuga rem  sint odit temporibus corporis. Deleniti est iusto sed reprehenderit dolores ad est necessitatibus unde. Et id blanditiis ex enim praesentium laudantium.\n \rEst quia odio sapiente ipsa qui pariatur vero dolorum. Consequuntur odio qui laudantium sequi sint eius dolores. Doloremque quae consequuntur ratione quia et cumque id aut.\n \rAut explicabo voluptatem maiores dicta. Explicabo aliquam soluta cupiditate fugit nulla magni velit. Quibusdam quia velit iure sunt iure illum autem quidem sed.',
+            privatePartyContact: 'Lon Gleason: 240-367-5375',
+            executiveChef: 'Zoey Bechtelar',
+            additional: 'Aut deserunt cupiditate enim eum accusantium expedita.',
+            website: 'http://rosemary.net',
+            phoneNumber: '905-430-9905' }
+                success: allPhotos => { this.setState({ photos: allPhotos, isLoading: false }) },
+                error: err => { console.log('Failed..', err) },
+        });
+    ```
 
 
 **POST photo**
