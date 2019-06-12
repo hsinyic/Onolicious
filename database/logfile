@@ -1,0 +1,521 @@
+2019-06-07 14:43:08.107 PDT [3675] LOG:  listening on IPv6 address "::1", port 5432
+2019-06-07 14:43:08.107 PDT [3675] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-06-07 14:43:08.108 PDT [3675] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-06-07 14:43:08.141 PDT [3676] LOG:  database system was shut down at 2019-06-07 14:41:44 PDT
+2019-06-07 14:43:08.154 PDT [3675] LOG:  database system is ready to accept connections
+2019-06-07 15:05:15.799 PDT [4041] FATAL:  database "makerpass" does not exist
+2019-06-07 15:25:14.953 PDT [6801] FATAL:  database "node" does not exist
+2019-06-07 15:41:17.978 PDT [8478] FATAL:  database "makerpass" does not exist
+2019-06-07 15:41:32.454 PDT [8618] FATAL:  database "makerpass" does not exist
+2019-06-07 15:49:55.887 PDT [8995] FATAL:  database "makerpass" does not exist
+2019-06-07 15:52:42.887 PDT [9160] FATAL:  database "makerpass" does not exist
+2019-06-07 15:53:00.203 PDT [9374] FATAL:  database "mydb" does not exist
+2019-06-07 15:53:10.122 PDT [9391] FATAL:  role "postgres" does not exist
+2019-06-07 15:55:54.298 PDT [9504] FATAL:  database "restaurant" does not exist
+2019-06-07 15:56:12.669 PDT [9517] ERROR:  syntax error at or near "user" at character 102
+2019-06-07 15:56:12.669 PDT [9517] STATEMENT:  CREATE TABLE photos (  
+	                id integer, 
+	                resid integer, 
+	                user varchar(255), 
+	                photo varchar(255), 
+	                timestamp date,
+	                unrelated_report integer, 
+	                inappropriate_report integer, 
+	                dislike smallint 
+	            );
+2019-06-07 15:59:19.906 PDT [9792] ERROR:  syntax error at or near "`/" at character 18
+2019-06-07 15:59:19.906 PDT [9792] STATEMENT:  COPY photos FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv
+	SELECT * FROM photos
+	;
+2019-06-07 15:59:55.263 PDT [10035] ERROR:  syntax error at or near "user" at character 102
+2019-06-07 15:59:55.263 PDT [10035] STATEMENT:  CREATE TABLE photos (  
+	                id integer, 
+	                resid integer, 
+	                user varchar(255), 
+	                photo varchar(255), 
+	                timestamp date,
+	                unrelated_report integer, 
+	                inappropriate_report integer, 
+	                dislike smallint 
+	);
+2019-06-07 16:00:18.215 PDT [10035] ERROR:  syntax error at or near "user" at character 66
+2019-06-07 16:00:18.215 PDT [10035] STATEMENT:  CREATE TABLE photos (  
+	    id integer, 
+	    resid integer, 
+	    user varchar(255), 
+	    photo varchar(255), 
+	    timestamp date,
+	    unrelated_report integer, 
+	    inappropriate_report integer, 
+	    dislike smallint 
+	);
+2019-06-07 16:07:26.397 PDT [10274] ERROR:  database "restaurant" is being accessed by other users
+2019-06-07 16:07:26.397 PDT [10274] DETAIL:  There is 1 other session using the database.
+2019-06-07 16:07:26.397 PDT [10274] STATEMENT:  DROP DATABASE restaurant;
+2019-06-07 16:08:19.452 PDT [10311] FATAL:  database "restaurant" does not exist
+2019-06-07 16:09:10.418 PDT [10339] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 16:09:10.418 PDT [10339] STATEMENT:  select * from photos;
+2019-06-07 16:09:16.871 PDT [10339] ERROR:  relation "photo" does not exist at character 15
+2019-06-07 16:09:16.871 PDT [10339] STATEMENT:  select * from photo;
+2019-06-07 16:09:18.715 PDT [10339] ERROR:  relation "photo" does not exist at character 15
+2019-06-07 16:09:18.715 PDT [10339] STATEMENT:  select * from photo;
+2019-06-07 16:09:22.525 PDT [10339] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 16:09:22.525 PDT [10339] STATEMENT:  select * from photos;
+2019-06-07 16:09:43.129 PDT [10371] FATAL:  database "makerpass" does not exist
+2019-06-07 16:09:43.129 PDT [10372] FATAL:  database "makerpass" does not exist
+2019-06-07 16:10:12.426 PDT [10383] FATAL:  database "makerpass" does not exist
+2019-06-07 16:10:12.428 PDT [10384] FATAL:  database "makerpass" does not exist
+2019-06-07 16:15:23.453 PDT [10549] FATAL:  database "makerpass" does not exist
+2019-06-07 16:17:58.011 PDT [10597] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 16:17:58.011 PDT [10597] STATEMENT:  select * from photos;
+2019-06-07 16:18:02.469 PDT [10597] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 16:18:02.469 PDT [10597] STATEMENT:  select * from photos;
+2019-06-07 16:18:15.634 PDT [10597] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 16:18:15.634 PDT [10597] STATEMENT:  select * from photos;
+2019-06-07 16:18:26.287 PDT [10597] ERROR:  relation "photos" does not exist at character 16
+2019-06-07 16:18:26.287 PDT [10597] STATEMENT:  SELECT * FROM  photos;
+2019-06-07 16:19:26.669 PDT [10597] ERROR:  unrecognized configuration parameter "tables"
+2019-06-07 16:19:26.669 PDT [10597] STATEMENT:  show tables;
+2019-06-07 16:59:55.337 PDT [10597] ERROR:  syntax error at or near "`/" at character 17
+2019-06-07 16:59:55.337 PDT [10597] STATEMENT:  COPY photo FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv`
+	select * from photos;
+2019-06-07 17:00:12.020 PDT [10597] ERROR:  syntax error at or near "`/" at character 18
+2019-06-07 17:00:12.020 PDT [10597] STATEMENT:  COPY photos FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv
+	select * from photos;
+2019-06-07 17:00:36.953 PDT [10597] ERROR:  syntax error at or near "`/" at character 18
+2019-06-07 17:00:36.953 PDT [10597] STATEMENT:  COPY photos FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv
+	COPY photos FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv;
+2019-06-07 17:00:50.657 PDT [10597] ERROR:  syntax error at or near "`" at character 18
+2019-06-07 17:00:50.657 PDT [10597] STATEMENT:  COPY photos FROM `Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv`;
+2019-06-07 17:01:01.929 PDT [10597] ERROR:  syntax error at or near "`/" at character 18
+2019-06-07 17:01:01.929 PDT [10597] STATEMENT:  COPY photos FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv`;
+2019-06-07 17:01:03.727 PDT [10597] ERROR:  syntax error at or near "`/" at character 18
+2019-06-07 17:01:03.727 PDT [10597] STATEMENT:  COPY photos FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv`;
+2019-06-07 17:01:12.514 PDT [10597] ERROR:  syntax error at or near "/" at character 18
+2019-06-07 17:01:12.514 PDT [10597] STATEMENT:  COPY photos FROM /Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv;
+2019-06-07 17:01:48.084 PDT [10597] ERROR:  syntax error at or near "`/" at character 18
+2019-06-07 17:01:48.084 PDT [10597] STATEMENT:  COPY photos FROM `/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv`;
+2019-06-07 17:02:09.569 PDT [10597] ERROR:  invalid input syntax for integer: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:02:09.569 PDT [10597] CONTEXT:  COPY photos, line 1, column id: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:02:09.569 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv';
+2019-06-07 17:11:22.113 PDT [10597] ERROR:  invalid input syntax for integer: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:11:22.113 PDT [10597] CONTEXT:  COPY photos, line 1, column id: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:11:22.113 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv';
+2019-06-07 17:16:41.698 PDT [10597] ERROR:  invalid input syntax for integer: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:16:41.698 PDT [10597] CONTEXT:  COPY photos, line 1, column id: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:16:41.698 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv';
+2019-06-07 17:19:07.785 PDT [10597] ERROR:  invalid input syntax for integer: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:19:07.785 PDT [10597] CONTEXT:  COPY photos, line 1, column id: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:19:07.785 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv';
+2019-06-07 17:19:11.296 PDT [10597] ERROR:  invalid input syntax for integer: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:19:11.296 PDT [10597] CONTEXT:  COPY photos, line 1, column id: ""id","resid","photo","user","date_posted","flagged""
+2019-06-07 17:19:11.296 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv';
+2019-06-07 17:25:58.066 PDT [10597] ERROR:  invalid input syntax for integer: "id"
+2019-06-07 17:25:58.066 PDT [10597] CONTEXT:  COPY photos, line 1, column id: "id"
+2019-06-07 17:25:58.066 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv' (format csv, null '\N');
+2019-06-07 17:27:38.412 PDT [10597] ERROR:  invalid input syntax for integer: "id"
+2019-06-07 17:27:38.412 PDT [10597] CONTEXT:  COPY photos, line 1, column id: "id"
+2019-06-07 17:27:38.412 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv' (format csv, null '\N');
+2019-06-07 17:28:23.601 PDT [10597] ERROR:  invalid input syntax for integer: "id"
+2019-06-07 17:28:23.601 PDT [10597] CONTEXT:  COPY photos, line 1, column id: "id"
+2019-06-07 17:28:23.601 PDT [10597] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv' (format csv, null '\N');
+2019-06-07 17:28:49.344 PDT [12178] ERROR:  invalid input syntax for integer: "id"
+2019-06-07 17:28:49.344 PDT [12178] CONTEXT:  COPY photos, line 1, column id: "id"
+2019-06-07 17:28:49.344 PDT [12178] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv' (format csv, null '\N');
+2019-06-07 17:29:01.650 PDT [12178] ERROR:  time zone "gmt-0700" not recognized
+2019-06-07 17:29:01.650 PDT [12178] CONTEXT:  COPY photos, line 1, column timestamp: "Wed Aug 29 2018 02:34:36 GMT-0700 (PDT)"
+2019-06-07 17:29:01.650 PDT [12178] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/photo.csv' (format csv, null '\N');
+2019-06-07 17:29:41.327 PDT [12178] ERROR:  relation "photos" already exists
+2019-06-07 17:29:41.327 PDT [12178] STATEMENT:  CREATE TABLE photos (  
+	                id integer, 
+	                resid integer, 
+	                username varchar(255), 
+	                photo varchar(255), 
+	                timestamp varchar(25),
+	                unrelated_report integer, 
+	                inappropriate_report integer, 
+	                dislike smallint 
+	            );
+2019-06-07 17:30:00.637 PDT [12178] ERROR:  invalid input syntax for integer: "id"
+2019-06-07 17:30:00.637 PDT [12178] CONTEXT:  COPY photos, line 1, column id: "id"
+2019-06-07 17:30:00.637 PDT [12178] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/database/photo.csv' (format csv, null '\N');
+2019-06-07 17:30:06.067 PDT [12178] ERROR:  value too long for type character varying(25)
+2019-06-07 17:30:06.067 PDT [12178] CONTEXT:  COPY photos, line 1, column timestamp: "Wed Aug 29 2018 02:34:36 GMT-0700 (PDT)"
+2019-06-07 17:30:06.067 PDT [12178] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/photo.csv' (format csv, null '\N');
+2019-06-07 17:30:32.297 PDT [12178] ERROR:  relation "photos" already exists
+2019-06-07 17:30:32.297 PDT [12178] STATEMENT:  CREATE TABLE photos (  
+	                id integer, 
+	                resid integer, 
+	                username varchar(255), 
+	                photo varchar(255), 
+	                timestamp varchar,
+	                unrelated_report integer, 
+	                inappropriate_report integer, 
+	                dislike smallint 
+	            );
+2019-06-07 17:30:36.258 PDT [12178] ERROR:  syntax error at or near "photos" at character 6
+2019-06-07 17:30:36.258 PDT [12178] STATEMENT:  drop photos;
+2019-06-07 17:32:34.623 PDT [12178] ERROR:  syntax error at or near "photos" at character 6
+2019-06-07 17:32:34.623 PDT [12178] STATEMENT:  drop photos
+	drop photos;
+2019-06-07 17:32:42.886 PDT [12178] ERROR:  syntax error at or near "photos" at character 6
+2019-06-07 17:32:42.886 PDT [12178] STATEMENT:  drop photos;
+2019-06-07 17:32:53.198 PDT [12178] ERROR:  syntax error at or near "REATE" at character 1
+2019-06-07 17:32:53.198 PDT [12178] STATEMENT:  REATE TABLE photos (  
+	                id integer, 
+	                resid integer, 
+	                username varchar(255), 
+	                photo varchar(255), 
+	                timestamp varchar,
+	                unrelated_report integer, 
+	                inappropriate_report integer, 
+	                dislike smallint 
+	            );
+2019-06-07 17:33:21.301 PDT [12178] ERROR:  invalid input syntax for integer: "000000000001,000000000001,Beatrice_Robel38,asyncphotos/25.jpg,Wed Aug 29 2018 02:34:36 GMT-0700 (PDT),0,0,0"
+2019-06-07 17:33:21.301 PDT [12178] CONTEXT:  COPY photos, line 1, column id: "000000000001,000000000001,Beatrice_Robel38,asyncphotos/25.jpg,Wed Aug 29 2018 02:34:36 GMT-0700 (PDT..."
+2019-06-07 17:33:21.301 PDT [12178] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/photo.csv';
+2019-06-07 17:39:26.892 PDT [12178] ERROR:  syntax error at or near "," at character 365
+2019-06-07 17:39:26.892 PDT [12178] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(255), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        catering, varchar(15), 
+	        privatePartyContact, varchar(255), 
+	        additional varchar(255), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 17:39:34.943 PDT [12178] ERROR:  syntax error at or near "," at character 407
+2019-06-07 17:39:34.943 PDT [12178] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(255), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        catering varchar(15), 
+	        privatePartyContact, varchar(255), 
+	        additional varchar(255), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 17:39:54.593 PDT [12178] ERROR:  value too long for type character varying(255)
+2019-06-07 17:39:54.593 PDT [12178] CONTEXT:  COPY info, line 1, column website: "Facere sit soluta ex et at delectus et exercitationem blanditiis. Debitis assumenda est occaecati po..."
+2019-06-07 17:39:54.593 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N');
+2019-06-07 17:41:59.689 PDT [12178] ERROR:  value too long for type character varying(15)
+2019-06-07 17:41:59.689 PDT [12178] CONTEXT:  COPY info, line 1, column catering: "Jayme Runolfsson"
+2019-06-07 17:41:59.689 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N');
+2019-06-07 17:45:32.260 PDT [12178] ERROR:  value too long for type character varying(15)
+2019-06-07 17:45:32.260 PDT [12178] CONTEXT:  COPY info, line 1, column catering: "'Dolores est excepturi eveniet voluptates. Quia laboriosam sint ut debitis aut. Officiis laudantium ..."
+2019-06-07 17:45:32.260 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N');
+2019-06-07 17:47:05.983 PDT [12178] ERROR:  syntax error at or near "(" at character 88
+2019-06-07 17:47:05.983 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' DELIMITER '|' (format csv, null '\N');
+2019-06-07 17:47:58.781 PDT [12178] ERROR:  value too long for type character varying(15)
+2019-06-07 17:47:58.781 PDT [12178] CONTEXT:  COPY info, line 1, column catering: "'Nemo sit nihil eius unde consequatur error culpa ut. Atque assumenda maxime enim harum tempore dolo..."
+2019-06-07 17:47:58.781 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, delimiter '|', null '\N');
+2019-06-07 17:51:17.094 PDT [12178] ERROR:  syntax error at or near "(" at character 98
+2019-06-07 17:51:17.094 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N') (DELIMITER '|');
+2019-06-07 17:51:28.236 PDT [12178] ERROR:  invalid input syntax for integer: "000000000001|1523 Volkman Inlet|Olin Court|Hintz Fords|West Maida|Abbie Trace|Casual Dining|Casual Dining|AMEX"
+2019-06-07 17:51:28.236 PDT [12178] CONTEXT:  COPY info, line 1, column id: "000000000001|1523 Volkman Inlet|Olin Court|Hintz Fords|West Maida|Abbie Trace|Casual Dining|Casual D..."
+2019-06-07 17:51:28.236 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N');
+2019-06-07 17:51:31.780 PDT [12178] ERROR:  invalid input syntax for integer: "000000000001|1523 Volkman Inlet|Olin Court|Hintz Fords|West Maida|Abbie Trace|Casual Dining|Casual Dining|AMEX"
+2019-06-07 17:51:31.780 PDT [12178] CONTEXT:  COPY info, line 1, column id: "000000000001|1523 Volkman Inlet|Olin Court|Hintz Fords|West Maida|Abbie Trace|Casual Dining|Casual D..."
+2019-06-07 17:51:31.780 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N');
+2019-06-07 18:31:48.800 PDT [12178] ERROR:  value too long for type character varying(15)
+2019-06-07 18:31:48.800 PDT [12178] CONTEXT:  COPY info, line 1, column catering: "'Nemo sit nihil eius unde consequatur error culpa ut. Atque assumenda maxime enim harum tempore dolo..."
+2019-06-07 18:31:48.800 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N', delimiter '|') ;
+2019-06-07 18:32:15.032 PDT [12178] ERROR:  relation "info" already exists
+2019-06-07 18:32:15.032 PDT [12178] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(1000), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        catering varchar(15), 
+	        privatePartyContact varchar(255), 
+	        additional varchar(255), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 18:32:49.698 PDT [12178] ERROR:  value too long for type character varying(15)
+2019-06-07 18:32:49.698 PDT [12178] CONTEXT:  COPY info, line 1, column catering: "'Nemo sit nihil eius unde consequatur error culpa ut. Atque assumenda maxime enim harum tempore dolo..."
+2019-06-07 18:32:49.698 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N', delimiter '|');
+2019-06-07 18:33:15.826 PDT [12178] ERROR:  relation "info" already exists
+2019-06-07 18:33:15.826 PDT [12178] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(1000), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        catering varchar(1000), 
+	        privatePartyContact varchar(255), 
+	        additional varchar(1000), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 18:33:27.694 PDT [12178] ERROR:  missing data for column "privatepartycontact"
+2019-06-07 18:33:27.694 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|1523 Volkman Inlet|Olin Court|Hintz Fords|West Maida|Abbie Trace|Casual Dining|Casual D..."
+2019-06-07 18:33:27.694 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N', delimiter '|');
+2019-06-07 18:35:33.716 PDT [12178] ERROR:  missing data for column "privatepartycontact"
+2019-06-07 18:35:33.716 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|85152 Dolores Divide|Dante Path|Lind Shoals|Port Michelfurt|Keeling Rapid|Tie and Suit|..."
+2019-06-07 18:35:33.716 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\N', delimiter '|');
+2019-06-07 18:44:45.618 PDT [12178] ERROR:  missing data for column "privatepartycontact"
+2019-06-07 18:44:45.618 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|713 Rolfson Drives|Ian Union|Swaniawski Road|New Lesterville|Hillard Orchard|Business C..."
+2019-06-07 18:44:45.618 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\z', delimiter '|');
+2019-06-07 18:49:22.159 PDT [12178] ERROR:  unquoted carriage return found in data
+2019-06-07 18:49:22.159 PDT [12178] HINT:  Use quoted CSV field to represent carriage return.
+2019-06-07 18:49:22.159 PDT [12178] CONTEXT:  COPY info, line 2
+2019-06-07 18:49:22.159 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\z', delimiter '|');
+2019-06-07 18:49:37.955 PDT [12178] ERROR:  unquoted carriage return found in data
+2019-06-07 18:49:37.955 PDT [12178] HINT:  Use quoted CSV field to represent carriage return.
+2019-06-07 18:49:37.955 PDT [12178] CONTEXT:  COPY info, line 2
+2019-06-07 18:49:37.955 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\z', delimiter '|');
+2019-06-07 18:49:57.630 PDT [12178] ERROR:  unquoted carriage return found in data
+2019-06-07 18:49:57.630 PDT [12178] HINT:  Use quoted CSV field to represent carriage return.
+2019-06-07 18:49:57.630 PDT [12178] CONTEXT:  COPY info, line 2
+2019-06-07 18:49:57.630 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\n', delimiter '|');
+2019-06-07 18:52:48.538 PDT [12178] ERROR:  syntax error at or near "TEXT" at character 113
+2019-06-07 18:52:48.538 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\n', delimiter '|') TEXT;
+2019-06-07 18:55:19.761 PDT [12178] ERROR:  missing data for column "privatepartycontact"
+2019-06-07 18:55:19.761 PDT [12178] CONTEXT:  COPY info, line 6: "000000000006|8896 Rey Wall|Mraz Vista|Lucy Lodge|Creminview|Rice Camp|Casual Dining|Casual Dining|AM..."
+2019-06-07 18:55:19.761 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\n', delimiter '|');
+2019-06-07 19:14:58.715 PDT [12178] ERROR:  could not open file " sed 's/\\/\\\\/g' < /Users/makerpass/Documents/GitHub/Photo-module/info.csv" for reading: No such file or directory
+2019-06-07 19:14:58.715 PDT [12178] HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.
+2019-06-07 19:14:58.715 PDT [12178] STATEMENT:  COPY info FROM ' sed ''s/\\/\\\\/g'' < /Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\n', delimiter '|');
+2019-06-07 19:19:22.232 PDT [12178] ERROR:  could not open file " /Users/makerpass/Documents/GitHub/Photo-module/info.csv" for reading: No such file or directory
+2019-06-07 19:19:22.232 PDT [12178] HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.
+2019-06-07 19:19:22.232 PDT [12178] STATEMENT:  COPY info FROM ' /Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\z', delimiter '|');
+2019-06-07 19:19:55.365 PDT [12178] ERROR:  could not open file " /Users/makerpass/Documents/GitHub/Photo-module/info.csv" for reading: No such file or directory
+2019-06-07 19:19:55.365 PDT [12178] HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.
+2019-06-07 19:19:55.365 PDT [12178] STATEMENT:  COPY info FROM ' /Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\z', delimiter '|');
+2019-06-07 19:22:22.972 PDT [12178] ERROR:  relation "info" already exists
+2019-06-07 19:22:22.972 PDT [12178] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(1000), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        catering varchar(1000), 
+	        privatePartyContact varchar(255), 
+	        additional varchar(1000), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 19:22:38.259 PDT [12178] ERROR:  could not open file " /Users/makerpass/Documents/GitHub/Photo-module/info.csv" for reading: No such file or directory
+2019-06-07 19:22:38.259 PDT [12178] HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.
+2019-06-07 19:22:38.259 PDT [12178] STATEMENT:  COPY info FROM ' /Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\z', delimiter '|');
+2019-06-07 19:22:48.512 PDT [12178] ERROR:  extra data after last expected column
+2019-06-07 19:22:48.512 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|6280 Jovanny Ranch|Will Walk|Franz Knoll|North Rowena|Jerald Mission|Tie and Suit|Tie a..."
+2019-06-07 19:22:48.512 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\z', delimiter '|');
+2019-06-07 19:23:07.349 PDT [12178] ERROR:  extra data after last expected column
+2019-06-07 19:23:07.349 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|6280 Jovanny Ranch|Will Walk|Franz Knoll|North Rowena|Jerald Mission|Tie and Suit|Tie a..."
+2019-06-07 19:23:07.349 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\\z', delimiter '|');
+2019-06-07 19:24:27.976 PDT [12178] ERROR:  extra data after last expected column
+2019-06-07 19:24:27.976 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|663 Quincy Knolls|Hyatt Lodge|Volkman Ways|Beierport|Schuppe Motorway|Casual Dining|Cas..."
+2019-06-07 19:24:27.976 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\\z', delimiter '|');
+2019-06-07 19:25:58.190 PDT [12178] ERROR:  extra data after last expected column
+2019-06-07 19:25:58.190 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|663 Quincy Knolls|Hyatt Lodge|Volkman Ways|Beierport|Schuppe Motorway|Casual Dining|Cas..."
+2019-06-07 19:25:58.190 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\\z', delimiter '|');
+2019-06-07 19:26:36.514 PDT [12178] ERROR:  extra data after last expected column
+2019-06-07 19:26:36.514 PDT [12178] CONTEXT:  COPY info, line 1: "000000000001|663 Quincy Knolls|Hyatt Lodge|Volkman Ways|Beierport|Schuppe Motorway|Casual Dining|Cas..."
+2019-06-07 19:26:36.514 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '\\z', delimiter '|');
+2019-06-07 19:28:34.697 PDT [12178] ERROR:  syntax error at or near ""COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, E '\\z', delimiter '|');"" at character 1
+2019-06-07 19:28:34.697 PDT [12178] STATEMENT:  "COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, E '\\z', delimiter '|');"
+	select * from info;
+2019-06-07 19:28:47.644 PDT [12178] ERROR:  option "e" not recognized at character 87
+2019-06-07 19:28:47.644 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, E '\\z', delimiter '|');
+2019-06-07 19:29:34.917 PDT [12178] ERROR:  COPY escape must be a single one-byte character
+2019-06-07 19:29:34.917 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, escape '\\z', delimiter '|');
+2019-06-07 19:29:46.677 PDT [12178] ERROR:  COPY escape must be a single one-byte character
+2019-06-07 19:29:46.677 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, escape '\z', delimiter '|');
+2019-06-07 19:39:42.031 PDT [12178] ERROR:  syntax error at or near "//" at character 358
+2019-06-07 19:39:42.031 PDT [12178] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(1000), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        // catering varchar(1000), 
+	        privatePartyContact varchar(255), 
+	        additional varchar(1000), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 19:39:52.849 PDT [12178] ERROR:  relation "info" already exists
+2019-06-07 19:39:52.849 PDT [12178] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(1000), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        privatePartyContact varchar(255), 
+	        additional varchar(1000), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 19:40:20.046 PDT [12178] ERROR:  COPY escape must be a single one-byte character
+2019-06-07 19:40:20.046 PDT [12178] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, escape '\n', delimiter '|');
+2019-06-07 19:41:53.907 PDT [12178] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 19:41:53.907 PDT [12178] STATEMENT:  select * from photos;
+2019-06-07 19:42:06.492 PDT [12178] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 19:42:06.492 PDT [12178] STATEMENT:  select * from photos;
+2019-06-07 19:42:26.754 PDT [16768] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 19:42:26.754 PDT [16768] STATEMENT:  select * from photos;
+2019-06-07 19:42:28.195 PDT [16768] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 19:42:28.195 PDT [16768] STATEMENT:  select * from photos;
+2019-06-07 19:42:28.852 PDT [16768] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 19:42:28.852 PDT [16768] STATEMENT:  select * from photos;
+2019-06-07 19:42:29.379 PDT [16768] ERROR:  relation "photos" does not exist at character 15
+2019-06-07 19:42:29.379 PDT [16768] STATEMENT:  select * from photos;
+2019-06-07 19:49:39.130 PDT [17278] ERROR:  syntax error at or near "seelct" at character 1
+2019-06-07 19:49:39.130 PDT [17278] STATEMENT:  seelct * from users;
+2019-06-07 19:49:43.868 PDT [17278] ERROR:  relation "users" does not exist at character 15
+2019-06-07 19:49:43.868 PDT [17278] STATEMENT:  select * from users;
+2019-06-07 19:50:38.337 PDT [17294] ERROR:  syntax error at or near "CREATE" at character 68
+2019-06-07 19:50:38.337 PDT [17294] STATEMENT:  CREATE TABLE users ( 
+	    id integer, 
+	    address varchar(255) 
+	)
+	CREATE TABLE users ( 
+	    id integer, 
+	    address varchar(255) 
+	)
+	select * from users;
+2019-06-07 19:50:46.601 PDT [17294] ERROR:  relation "users" does not exist at character 15
+2019-06-07 19:50:46.601 PDT [17294] STATEMENT:  select * from users;
+2019-06-07 19:51:04.832 PDT [17294] ERROR:  syntax error at or near "CREATE" at character 68
+2019-06-07 19:51:04.832 PDT [17294] STATEMENT:  CREATE TABLE users ( 
+	    id integer, 
+	    address varchar(255) 
+	)
+	CREATE TABLE users ( 
+	    id integer, 
+	    address varchar(255) 
+	)
+	SELECT * FROM users;
+2019-06-07 19:51:13.147 PDT [17294] ERROR:  relation "info" already exists
+2019-06-07 19:51:13.147 PDT [17294] STATEMENT:  CREATE TABLE info (  
+	        id integer, 
+	        address varchar(255), 
+	        name varchar(1000), 
+	        crossStreet varchar(255), 
+	        neighborhood varchar(255), 
+	        cuisines varchar(255), 
+	        diningStyle varchar(255), 
+	        dressCode varchar(255), 
+	        paymentOptions varchar(255), 
+	        executiveChef varchar(255), 
+	        privatePartyContact varchar(255), 
+	        additional varchar(1000), 
+	        website varchar(255), 
+	        phoneNumber varchar(255) 
+	    );
+2019-06-07 19:53:43.330 PDT [17644] FATAL:  database "makerpass" does not exist
+2019-06-07 19:55:55.877 PDT [16768] ERROR:  there is no parameter $1 at character 32
+2019-06-07 19:55:55.877 PDT [16768] STATEMENT:  SELECT * FROM users WHERE id = $1
+	;
+2019-06-07 19:56:46.764 PDT [17961] FATAL:  database "makerpass" does not exist
+2019-06-07 20:04:31.324 PDT [18635] ERROR:  relation "photos" already exists
+2019-06-07 20:04:31.324 PDT [18635] STATEMENT:  CREATE TABLE photos (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:04:31.324 PDT [18636] ERROR:  relation "info" already exists
+2019-06-07 20:04:31.324 PDT [18636] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:04:36.086 PDT [18646] ERROR:  relation "photos" already exists
+2019-06-07 20:04:36.086 PDT [18646] STATEMENT:  CREATE TABLE photos (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:04:36.087 PDT [18647] ERROR:  relation "info" already exists
+2019-06-07 20:04:36.087 PDT [18647] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:05:20.775 PDT [17294] ERROR:  syntax error at or near "droptable" at character 1
+2019-06-07 20:05:20.775 PDT [17294] STATEMENT:  droptable photos;
+2019-06-07 20:06:43.025 PDT [18752] ERROR:  relation "photos" already exists
+2019-06-07 20:06:43.025 PDT [18752] STATEMENT:  CREATE TABLE photos (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:06:43.026 PDT [18753] ERROR:  relation "info" already exists
+2019-06-07 20:06:43.026 PDT [18753] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:06:53.518 PDT [18772] ERROR:  relation "photos" already exists
+2019-06-07 20:06:53.518 PDT [18772] STATEMENT:  CREATE TABLE photos (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:06:53.524 PDT [18773] ERROR:  relation "info" already exists
+2019-06-07 20:06:53.524 PDT [18773] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:07:02.721 PDT [17294] ERROR:  table "photo" does not exist
+2019-06-07 20:07:02.721 PDT [17294] STATEMENT:  drop table photo;
+2019-06-07 20:07:07.706 PDT [18795] ERROR:  relation "photos" already exists
+2019-06-07 20:07:07.706 PDT [18795] STATEMENT:  CREATE TABLE photos (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:07:25.199 PDT [17294] ERROR:  table "photos" does not exist
+2019-06-07 20:07:25.199 PDT [17294] STATEMENT:  drop table photos;
+2019-06-07 20:07:27.311 PDT [18854] ERROR:  relation "info" already exists
+2019-06-07 20:07:27.311 PDT [18854] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:09:27.902 PDT [18975] ERROR:  relation "info" already exists
+2019-06-07 20:09:27.902 PDT [18975] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:09:27.902 PDT [18976] ERROR:  relation "photos" already exists
+2019-06-07 20:09:27.902 PDT [18976] STATEMENT:  CREATE TABLE photos (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:09:35.787 PDT [19006] ERROR:  COPY null representation cannot use newline or carriage return
+2019-06-07 20:09:35.787 PDT [19006] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '
+	', delimiter '|');
+2019-06-07 20:09:35.789 PDT [19005] ERROR:  invalid input syntax for integer: "000000000001|000000000001|Gilberto_Orn58|asyncphotos/43.jpg|Sat Dec 08 2018 22:28:23 GMT-0800 (PST)|0|0|0"
+2019-06-07 20:09:35.789 PDT [19005] CONTEXT:  COPY photos, line 1, column id: "000000000001|000000000001|Gilberto_Orn58|asyncphotos/43.jpg|Sat Dec 08 2018 22:28:23 GMT-0800 (PST)|..."
+2019-06-07 20:09:35.789 PDT [19005] STATEMENT:  COPY photos FROM '/Users/makerpass/Documents/GitHub/Photo-module/photo.csv' (format csv, null 'N');
+2019-06-07 20:10:16.076 PDT [17294] ERROR:  table "info" does not exist
+2019-06-07 20:10:16.076 PDT [17294] STATEMENT:  drop table info;
+2019-06-07 20:10:16.077 PDT [17294] ERROR:  table "photo" does not exist
+2019-06-07 20:10:16.077 PDT [17294] STATEMENT:  drop table photo;
+2019-06-07 20:10:19.226 PDT [19094] ERROR:  COPY null representation cannot use newline or carriage return
+2019-06-07 20:10:19.226 PDT [19094] STATEMENT:  COPY photo FROM '/Users/makerpass/Documents/GitHub/Photo-module/photo.csv' (format csv, null '
+	', delimiter '|');
+2019-06-07 20:10:19.227 PDT [19093] ERROR:  COPY null representation cannot use newline or carriage return
+2019-06-07 20:10:19.227 PDT [19093] STATEMENT:  COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, null '
+	', delimiter '|');
+2019-06-07 20:11:56.629 PDT [19196] ERROR:  relation "info" already exists
+2019-06-07 20:11:56.629 PDT [19196] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:11:56.629 PDT [19197] ERROR:  relation "photo" already exists
+2019-06-07 20:11:56.629 PDT [19197] STATEMENT:  CREATE TABLE photo (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:13:30.994 PDT [19272] ERROR:  relation "photo" already exists
+2019-06-07 20:13:30.994 PDT [19272] STATEMENT:  CREATE TABLE photo (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:13:30.995 PDT [19273] ERROR:  relation "info" already exists
+2019-06-07 20:13:30.995 PDT [19273] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:14:23.118 PDT [19342] ERROR:  relation "photo" already exists
+2019-06-07 20:14:23.118 PDT [19342] STATEMENT:  CREATE TABLE photo (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 20:14:23.119 PDT [19343] ERROR:  relation "info" already exists
+2019-06-07 20:14:23.119 PDT [19343] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:14:41.018 PDT [19373] ERROR:  relation "info" already exists
+2019-06-07 20:14:41.018 PDT [19373] STATEMENT:  CREATE TABLE info (          id integer,         address varchar(255),         name varchar(1000),         crossStreet varchar(255),         neighborhood varchar(255),         cuisines varchar(255),         diningStyle varchar(255),         dressCode varchar(255),         paymentOptions varchar(255),         executiveChef varchar(255),         privatePartyContact varchar(255),         additional varchar(1000),         website varchar(255),         phoneNumber varchar(255)     );
+2019-06-07 20:14:41.020 PDT [19372] ERROR:  relation "photo" already exists
+2019-06-07 20:14:41.020 PDT [19372] STATEMENT:  CREATE TABLE photo (                  id integer,                 resid integer,                 username varchar(255),                 photo varchar(255),                 timestamp varchar,                unrelated_report integer,                 inappropriate_report integer,                 dislike smallint             );
+2019-06-07 22:15:42.527 PDT [17294] ERROR:  relation "info" does not exist at character 15
+2019-06-07 22:15:42.527 PDT [17294] STATEMENT:  select * from info;
+2019-06-08 14:40:58.009 PDT [3675] LOG:  received smart shutdown request
+2019-06-08 14:40:58.014 PDT [3675] LOG:  worker process: logical replication launcher (PID 3682) exited with exit code 1
+2019-06-08 14:40:58.015 PDT [3677] LOG:  shutting down
+2019-06-08 14:40:58.049 PDT [3675] LOG:  database system is shut down

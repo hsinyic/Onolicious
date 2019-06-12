@@ -1,5 +1,10 @@
 ## MAC files ##
 .DS_Store
+## Data Files ##
+database/*.csv
+database/*.gz
+*.csv
+*.gz
 
 ## NPM ##
 npm

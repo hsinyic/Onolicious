@@ -25,7 +25,7 @@ app.get('/API/info/:id', (req, res) => {
 });
 
 app.post('/API/info/:id', (req, res) => {
-  var index = req.params.id;
+  var data = req.body;
   db.crudFxn.getPhoto(index, (err, results) => {
     if (err){
       res.status(505);
@@ -40,15 +40,14 @@ app.post('/API/info/:id', (req, res) => {
 
 
 app.post('/API/photos/:id', (req, res) => {
-  var index = req.params.id;
-
-  
+  var data = req.body;
   res.status(200);
   res.send();
 });
 
 app.put('/API/info/:id', (req, res) => {
   var index = req.params.id;
+  var data = req.body;
   res.status(200);
   res.send();
 });
@@ -57,7 +56,7 @@ app.put('/API/info/:id', (req, res) => {
 
 app.put('/API/photos/:id', (req, res) => {
   var index = req.params.id;
-
+  var data = req.body;
   res.status(200);
   res.send();
 });
