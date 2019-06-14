@@ -24,11 +24,6 @@ class SidebarInfo extends React.Component {
           info: getInfo,
           isLoading: false,
           map: ('https://www.google.com/maps?q=' + String(getInfo[0].address) + '&output=embed'),
-        }, ()=>{
-          console.log('what', this.state.info[0].crossstreet,
-          this.state.info[0].cuisines)
-
-
         })
       },
       error: err => { console.log('Failed..', err) },

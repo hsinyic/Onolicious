@@ -104,3 +104,38 @@ fstream
     .on('end', done)
     .on('err', somethingelse)
 )
+
+
+
+
+// ##########
+// #
+// ##########
+const Readable = require('stream').Readable
+const fs = require('fs')
+const zlib = require('zlib');
+const gzip = zlib.createGzip();
+const copyFrom = require('pg-copy-streams').from;
+
+var d = ` 111044 , 'Deleniti rerum minima dicta.' , '985 Isaiah Locks' , 'Reymundo Roads' , 'Lamar Shore' , 'Casual Dining' , 'Casual Dining' , 'Torrey Stoltenberg' , 'Nolan Views' , 'Prohaskachester' , 1011 , '579-926-5032' , 'Breanna Nader: 858-205-5056' , 'http://kaelyn.biz' \n \
+111045 , 'Hello Kitty' , '1617 Clark St' , 'Meowwwww ' , 'Who's that , 'Casual Dining' , 'Casual Dining' , 'Kitty fart' , 'Cute paws' , 'Tuna can' , 1011 , '890-567-1234' , 'Big meow: 808-205-5056' , 'http://www.cat.com'  \n \
+111049 , 'Hello Dog' , '1617 Clark St' , 'Meowwwww ' , 'Who's that , 'Casual Dining' , 'Casual Dining' , 'Kitty fart' , 'Cute paws' , 'Tuna can' , 1011 , '890-567-1234' , 'Big meow: 808-205-5056' , 'http://www.cat.com'  \n `
+
+// id,address,name, crossstreet, neighborhood, cuisines , diningstyle , dresscode ,paymentoptions , executivechef, privatepartycontact,additional, website, phonenumber \n \
+
+var inputHeader = new Readable({encoding: 'utf8'})
+inputHeader._read = () => { };  
+inputHeader.push(d);
+// inputHeader.push(null);
+var csvNoHeader = fs.createWriteStream('test.csv.gz',{encoding: 'utf8'});
+inputHeader.pipe(gzip).pipe(csvNoHeader);
+
+var d2 = ` 111045 , 's;dfjsldfjl;sdkf.' , '985 Isaiah Locks' , 'Reymundo Roads' , 'Lamar Shore' , 'Casual Dining' , 'Casual Dining' , 'Torrey Stoltenberg' , 'Nolan Views' , 'Prohaskachester' , 1011 , '579-926-5032' , 'Breanna Nader: 858-205-5056' , 'http://kaelyn.biz' \n  \
+  111045 , 'Z:LXX>X<MCNVCV' , '1617 Clark St' , 'Meowwwww ' , 'Who's that , 'Casual Dining' , 'Casual Dining' , 'Kitty fart' , 'Cute paws' , 'Tuna can' , 1011 , '890-567-1234' , 'Big meow: 808-205-5056' , 'http://www.cat.com'  \n  \
+  111047 , '23-04809825824-0' , '1617 Clark St' , 'Meowwwww ' , 'Who's that , 'Casual Dining' , 'Casual Dining' , 'Kitty fart' , 'Cute paws' , 'Tuna can' , 1011 , '890-567-1234' , 'Big meow: 808-205-5056' , 'http://www.cat.com' \n `
+
+var inputHeader2 = new Readable({encoding: 'utf8'})
+inputHeader2._read = () => { };  
+inputHeader2.push(d2);     
+// inputHeader2.push(null);  
+inputHeader2.pipe(gzip).pipe(csvNoHeader);
