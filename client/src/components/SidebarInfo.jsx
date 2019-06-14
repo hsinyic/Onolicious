@@ -12,16 +12,23 @@ class SidebarInfo extends React.Component {
       viewMore: false,
     }
     this.handleView = this.handleView.bind(this);
+    console.log('sidebar id is ', this.props.id);
   }
   componentDidMount() {
     $.get({
-      url: 'http://localhost:3050/API/info/' + this.props.id ,
+      url: 'http://localhost:3050/API/info/' + this.props.id,
       dataType: 'json',
       success: getInfo => {
+        getInfo = getInfo.rows;
         this.setState({
           info: getInfo,
           isLoading: false,
           map: ('https://www.google.com/maps?q=' + String(getInfo[0].address) + '&output=embed'),
+        }, ()=>{
+          console.log('what', this.state.info[0].crossstreet,
+          this.state.info[0].cuisines)
+
+
         })
       },
       error: err => { console.log('Failed..', err) },
@@ -59,7 +66,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Cross street</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].crossStreet}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].crossstreet}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -95,7 +102,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Dining Style</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].diningStyle}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].diningstyle}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -104,7 +111,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Dress code</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].dressCode}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].dresscode}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -113,7 +120,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Payment options</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].paymentOptions}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].paymentoptions}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -122,7 +129,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Executive chef</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].executiveChef}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].executivechef}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -159,7 +166,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Cross street</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].crossStreet}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].crossstreet}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -195,7 +202,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Dining Style</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].diningStyle}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].diningstyle}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -204,7 +211,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Dress code</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].dressCode}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].dresscode}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -213,7 +220,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Payment options</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].paymentOptions}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].paymentoptions}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -222,7 +229,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Executive chef</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].executiveChef}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].executivechef}</div>
             </div>
           </div>
           <div className="sidebar-info-node">
@@ -251,7 +258,7 @@ class SidebarInfo extends React.Component {
             </div>
             <div className="sidebar-info-text">
               <span>Phone number</span>
-              <div className="sidebar-info-text-lower">{this.state.info[0].phoneNumber}</div>
+              <div className="sidebar-info-text-lower">{this.state.info[0].phonenumber}</div>
             </div>
           </div>
           <div>

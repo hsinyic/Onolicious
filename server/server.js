@@ -7,73 +7,38 @@ const path = require('path');
 
 app.use(cors());
 app.use(express.static(path.resolve(__dirname, '../client/public')));
+app.use('/overviews/:id', express.static(path.resolve(__dirname, '../client/public')));
+
+app.get('/overviews/:id', (req, res) => {
+  res.send(200);
+})
 
 app.get('/API/photos/:id', (req, res) => {
   var index = req.params.id;
-  db.crudFxn.getPhotos(index, (results) => {
-    res.status(200);
-    res.send(results);
+  
+  db.crudFxn.getPhotos(index, (err, results) => {
+    // console.log(err, results)
+    if (err) {
+      res.status(500).send();
+    } else {
+      res.status(200);
+      res.send(results);
+    }
   });
 });
 
 app.get('/API/info/:id', (req, res) => {
   var index = req.params.id;
-  db.crudFxn.getInfo(index, (results) => {
-    res.status(200);
-    res.send(results);
-  });
-});
-
-app.post('/API/info/:id', (req, res) => {
-  var data = req.body;
-  db.crudFxn.getPhoto(index, (err, results) => {
-    if (err){
-      res.status(505);
+  db.crudFxn.getInfo(index, (err, results) => {
+    if (err) {
+      res.status(500).send();
+    } else {
+      res.status(200);
+      res.send(results);
     }
-    res.status(200);
-    res.send(results);
   });
-  res.status(200);
-  res.send();
 });
 
-
-
-app.post('/API/photos/:id', (req, res) => {
-  var data = req.body;
-  res.status(200);
-  res.send();
-});
-
-app.put('/API/info/:id', (req, res) => {
-  var index = req.params.id;
-  var data = req.body;
-  res.status(200);
-  res.send();
-});
-
-
-
-app.put('/API/photos/:id', (req, res) => {
-  var index = req.params.id;
-  var data = req.body;
-  res.status(200);
-  res.send();
-});
-
-app.delete('/API/info/:id', (req, res) => {
-  var index = req.params.id;
-  res.status(200);
-  res.send();
-});
-
-
-
-app.delete('/API/photos/:id', (req, res) => {
-  var index = req.params.id;
-  res.status(200);
-  res.send();
-});
 
 
 

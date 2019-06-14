@@ -17,15 +17,7 @@ inputHeader.push(null);
 var csvNoHeader = fs.createWriteStream('test.csv.gz',{encoding: 'utf8'});
 inputHeader.pipe(gzip).pipe(csvNoHeader);
 
-var d2 = ` 111045 , 's;dfjsldfjl;sdkf.' , '985 Isaiah Locks' , 'Reymundo Roads' , 'Lamar Shore' , 'Casual Dining' , 'Casual Dining' , 'Torrey Stoltenberg' , 'Nolan Views' , 'Prohaskachester' , 1011 , '579-926-5032' , 'Breanna Nader: 858-205-5056' , 'http://kaelyn.biz' \n  \
-  111045 , 'Z:LXX>X<MCNVCV' , '1617 Clark St' , 'Meowwwww ' , 'Who's that , 'Casual Dining' , 'Casual Dining' , 'Kitty fart' , 'Cute paws' , 'Tuna can' , 1011 , '890-567-1234' , 'Big meow: 808-205-5056' , 'http://www.cat.com'  \n  \
-  111047 , '23-04809825824-0' , '1617 Clark St' , 'Meowwwww ' , 'Who's that , 'Casual Dining' , 'Casual Dining' , 'Kitty fart' , 'Cute paws' , 'Tuna can' , 1011 , '890-567-1234' , 'Big meow: 808-205-5056' , 'http://www.cat.com' \n `
 
-var inputHeader2 = new Readable({encoding: 'utf8'})
-inputHeader2._read = () => { };  
-inputHeader2.push(d2);     
-// inputHeader2.push(null);  
-inputHeader2.pipe(gzip).pipe(csvNoHeader);
 
 
 
@@ -90,6 +82,10 @@ fs.createReadStream('inpCustom.txt.gz', {start: 0, end: bytesRead, chunkSize: by
 
 
 
+
+// ###########
+// #
+// ###########
 const es = require('es');
 const pgs = require('pg-copy-stream');
 pool.query('').then(res => {

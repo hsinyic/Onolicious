@@ -121,7 +121,12 @@ data.cuisine = [
 ]
 
 data.diningStyle =
-  ["Casual Dining", "Business Casual", "Tie and Suit"]
+  ["Casual Dining", "Elegant Dining", "Elegant", "Casual Elegant"]
+data.dressingStyle =
+["Casual Dress", "Business Casual", "Tie and Suit"]
+data.cuisine =
+["Mediterranean", "Chinese", "French", "Japanese", "Italian", "American", "Thai","Vietnamese", "Mexican", "Iranian", "Persian", "Hawaiian"]
+
 data.paymentOptions =
   ["AMEX", "Discover", "Visa", "MasterCard"]
 

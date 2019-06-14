@@ -13,8 +13,8 @@ CREATE TABLE test.photo (
 
 
 COPY test.photo (id, resid, usr, photo, datePosted, unrelated_report, inappropriate_report, dislike)
-FROM  '/Users/makerpass/Documents/GitHub/Photo-module/photo.csv'
-WITH DELIMITER='|' AND HEADER=TRUE ;
+FROM  '/Volumes/NO NAME/photoTest.csv'
+WITH DELIMITER=',' AND HEADER=TRUE ;
 
 // -- Create table for info
 
@@ -53,5 +53,5 @@ COPY test.info (
     website,
     phoneNumber
 )
-FROM  '/Users/makerpass/Documents/GitHub/Photo-module/info.csv'
-WITH DELIMITER='|' AND HEADER=TRUE ;
+FROM  '/Volumes/NO NAME/info1.csv'
+WITH DELIMITER=',' AND HEADER=TRUE ;

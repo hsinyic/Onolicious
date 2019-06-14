@@ -1,75 +1,68 @@
 const faker = require('faker');
-const jsscompress = require("js-string-compression");
-// require('events').EventEmitter.defaultMaxListeners = 100;
-
 const fs = require('fs');
 const data = require('./data.js');
 const Readable = require('stream').Readable;
 
 var photoRecord = [];
 var infoRecord = [];
-var nRecords = Math.floor(10**5);
+var nRecords = Math.floor(10 ** 7);
 var diningStyle = data.diningStyle;
 var diningStyleL = diningStyle.length;
+var dressingStyle = data.dressingStyle;
+var dressingStyleL = dressingStyle.length;
+var cuisine = data.cuisine;
+var cuisineL = cuisine.length;
 var paymentOptions = data.paymentOptions;
 var photoLink = data.photo;
 
 var photoL = photoLink.length;
 var columnD = ",";
-let writeStreamPhoto = fs.createWriteStream('/Volumes/NO\ NAME/photo.csv');
-let writeStreamInfo = fs.createWriteStream('/Volumes/NO\ NAME/info.csv');
+let writeStreamPhoto = fs.createWriteStream('/Volumes/NO\ NAME/photoNull.csv');
+let writeStreamInfo = fs.createWriteStream('/Volumes/NO\ NAME/info1.csv');
 
+
+var streetAddress = new Array(1000).fill(0).map(i => faker.address.streetAddress())
+var name = new Array(1000).fill(0).map(i => faker.name.lastName())
+var streetName = new Array(1000).fill(0).map(i => faker.address.streetName())
+var city = new Array(1000).fill(0).map(i => faker.address.city())
+var findName = new Array(1000).fill(0).map(i => faker.name.findName())
+var phoneNumberFormat = new Array(1000).fill(0).map(i => faker.phone.phoneNumberFormat().slice(0, 12))
+var sentence = new Array(1000).fill(0).map(i => faker.lorem.sentence())
+var url = new Array(1000).fill(0).map(i => faker.internet.url())
+var userName = new Array(1000).fill(0).map(i => faker.internet.userName())
+var past = new Array(1000).fill(0).map(i => faker.date.past().toLocaleString('en-us', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace('-', ''))
+var lorem = new Array(1000).fill(0).map(i => faker.lorem.word());
+var paymentOptions = ["'0000'", "'0001'", "'0010'", "'0011'", "'0100'", "'0101'", "'0110'", "'0111'", 
+"'1000'", "'1001'", "'1010'", "'1011'", "'1100'", "'1101'", "'1110'", "'1111'"]
+var paymentOptionsL = paymentOptions.length;
 var RestaurantInstance = function (n) {
-  // this.id = n;
-  // this.address = faker.address.streetAddress();
-  // this.name = faker.address.streetName();
-  // this.crossStreet = faker.address.streetName();
-  // this.neighborhood = faker.address.city();
-  // this.cuisines = faker.address.streetName();
-  // this.diningStyle = diningStyle[Math.floor((Math.random() * diningStyleL))];
-  // this.dressCode = this.diningStyle;
-  // this.paymentOptions = "'" + paymentOptions.map((i, idx) => (Math.random() < 0.5 ? 1:0)).join('') + "'";
-  // this.executiveChef = faker.name.findName();
-  // // this.catering = (Math.random() < 0.4) ? "'"+ faker.lorem.paragraphs() + "'" : "'No catering'";
-  // this.privatePartyContact = faker.name.findName() + ': ' + faker.phone.phoneNumberFormat().slice(0,
-  //   12);
-  // this.additional = "'" + faker.lorem.sentence() + "'";
-  // this.website = "'" + faker.internet.url() + "'";
-  // this.phoneNumber = faker.phone.phoneNumberFormat().slice(0, 12);
-  // // var diningStyle = diningStyle[Math.floor((Math.random() * diningStyleL))];
-  return [n, faker.address.streetAddress(), faker.address.streetName(), faker.address.streetName(), 
-    faker.address.city(), faker.address.streetName(), diningStyle,  diningStyle, 
-     , [ "'", ...paymentOptions.map((i, idx) => (Math.random() < 0.5 ? 1:0)), "'"].join('') 
-     , faker.name.findName()
-    , faker.name.findName() + ': ' + faker.phone.phoneNumberFormat().slice(0, 12)
-    , "'" + faker.lorem.sentence() + "'"
-    , "'" + faker.internet.url() + "'"
-    , faker.phone.phoneNumberFormat().slice(0, 12)].join(columnD) + ' \n'
+  return [n,
+    streetAddress[Math.floor(Math.random() * 1000)],
+    lorem[Math.floor(Math.random() * 1000)],
+    streetName[Math.floor(Math.random() * 1000)],
+    city[Math.floor(Math.random() * 1000)],
+    cuisine[Math.floor((Math.random() * cuisineL))],
+    diningStyle[Math.floor((Math.random() * diningStyleL))],
+    dressingStyle[Math.floor((Math.random() * dressingStyleL))],
+    paymentOptions[Math.floor((Math.random() * paymentOptionsL))],
+    findName[Math.floor(Math.random() * 1000)],
+    findName[Math.floor(Math.random() * 1000)] + ': ' + phoneNumberFormat[Math.floor(Math.random() * 1000)],
+    "'" + sentence[Math.floor(Math.random() * 1000)] + "'",
+    "'" + url[Math.floor(Math.random() * 1000)] + "'",
+    phoneNumberFormat[Math.floor(Math.random() * 1000)]].join(columnD) + ' \n'
 };
 
 var PhotoInstance = function (n, photocount) {
-  // this.id = photocount;
-  // this.resid = n;
-  // this.usr = faker.internet.userName();
-  // this.photo = photoLink[Math.floor(Math.random() * photoL)];
-  // this.datePosted = faker.date.past().toLocaleString('en-us', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace('-', '');
-  // this.unrelated_report = Math.random() < 0.01 ? Math.floor((Math.random() * 10)) : 0;
-  // this.inappropriate_report = Math.random() < 0.01 ? Math.floor((Math.random() * 10)) : 0;
-  // this.dislike = Math.random() < 0.01 ? Math.floor((Math.random() * 10)) : 0;
-
-
-  return [photocount, 
-    n, 
-    faker.internet.userName(), 
-    photoLink[Math.floor(Math.random() * photoL)], 
-    faker.date.past().toLocaleString('en-us', {year: 'numeric', month: '2-digit', day: '2-digit'}).replace('-', ''), 
+  return [
+    photocount,
+    n,
+    userName[Math.floor(Math.random() * 1000)],
+    photoLink[Math.floor(Math.random() * photoL)],
+    past[Math.floor(Math.random() * 1000)],
     Math.random() < 0.01 ? Math.floor((Math.random() * 10)) : 0,
     Math.random() < 0.01 ? Math.floor((Math.random() * 10)) : 0,
-    Math.random() < 0.01 ? Math.floor((Math.random() * 10)) : 0].join(columnD) +  '\n'
-  
-
+    Math.random() < 0.01 ? Math.floor((Math.random() * 10)) : 0].join(columnD) + '\n'
 }
-
 
 
 
@@ -81,36 +74,26 @@ function writeOneMillionTimes(writeStreamInfo, writeStreamPhoto, encoding, callb
     let ok = true;
     do {
       i++;
-      // var resString = '';
       var photoString = '';
-      // var restaurant = RestaurantInstance(i);
-      // console.log(restaurant)
-      // var values = Object.values(restaurant).join(columnD) + "\n";
-      // resString += restaurant;
-      var numOfPhotos = 15 + Math.random() * 20;
+      var numOfPhotos = 6 + Math.random() * 8;
       for (var j = 1; j < numOfPhotos; j++) {
         photocount++;
         var photo = PhotoInstance(i, photocount);
-        // console.log(photo)
-        // var values = Object.values(photo).join(columnD) + "\n";
         photoString += photo;
       }
-      // Hauffman compression for string
-      // var hmPhoto = new jsscompress.Hauffman();
-      // var hmInfo = new jsscompress.Hauffman();
-      // var compressedPhoto = hmPhoto.compress(photoString);
-      // var compressedInfo = hmInfo.compress(resString);
-      if (i === nRecords) { // last time 
+      if (i === nRecords) {
         writeStreamInfo.write(RestaurantInstance(i), encoding, callback);
         writeStreamPhoto.write(photoString, encoding, callback);
       } else {
-        if (i % 1000 === 0) {
+        if (i % (nRecords/100) === 0) {
           console.log(i / nRecords);
         }
         infook = writeStreamInfo.write(RestaurantInstance(i), encoding);
         photook = writeStreamPhoto.write(photoString, encoding);
       }
-    } while ((i < nRecords && infook ) && photook);
+    }
+
+    while ((i < nRecords && infook ) && photook);
     if (i < nRecords) {
       if (!photook){
         writeStreamPhoto.once('drain', write);
@@ -123,7 +106,3 @@ function writeOneMillionTimes(writeStreamInfo, writeStreamPhoto, encoding, callb
 
 
 writeOneMillionTimes(writeStreamInfo, writeStreamPhoto, 'utf8', () => { console.log('done') })
-
-
-// writeStreamInfo.end();
-// writeStreamPhoto.end();

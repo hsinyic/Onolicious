@@ -29,7 +29,7 @@ pool.query(
             );'
             // id integer, \
     , "").then(res => {
-        pool.query("COPY photo FROM '/Users/makerpass/Documents/GitHub/Photo-module/photo.csv' (format csv, delimiter '|');").then(res => {
+        pool.query("COPY photo FROM '/Volumes/NO\ NAME/photo2.csv' (format csv, delimiter ',');").then(res => {
                 console.log(res);
             }).catch(e => {
                 console.log(e.stack)
@@ -60,7 +60,7 @@ pool.query(
     );'
     // catering varchar(1000), \
     , "").then(res => {
-        pool.query("COPY info FROM '/Users/makerpass/Documents/GitHub/Photo-module/info.csv' (format csv, delimiter '|');")
+        pool.query("COPY info FROM '/Volumes/NO\ NAME/info1.csv' (format csv, delimiter ',');")
             .then(res => {
                 console.log(res);
                 // console.log(res.rows[0]) // unfortunately res.rows do not give back your specific rows; 
@@ -74,5 +74,8 @@ pool.query(
 
 
 
-
+    // CREATE INDEX index_id ON info (id);
+//     CREATE INDEX index_photoid ON photo (id);
+//     CREATE INDEX index_resid ON photo (resid);
+// // 
 
