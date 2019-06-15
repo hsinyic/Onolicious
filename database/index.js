@@ -21,7 +21,6 @@ crudFxn.getPhotos = function (index, callback) {
     if (error) {
       callback(error, null)
     } else {
-      console.log('hiiii success');
       callback(null, results);
       
     }
@@ -29,7 +28,6 @@ crudFxn.getPhotos = function (index, callback) {
 };
 
 crudFxn.getInfo = function (index, callback) {
-  console.log(`SELECT * FROM info where id = $1`, [Number(index)])
   pool.query(`SELECT * FROM info where id = $1`, [Number(index)], (error, results, fields) => {
     if (error) {
       callback(error, null)

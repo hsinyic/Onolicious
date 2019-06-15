@@ -7,6 +7,7 @@
   "license": "",
   "scripts": {
     "start": "nodemon server/server.js",
+    "startPhoto": "nodemon server/serverPhoto.js",
     "react-dev": "webpack -d --watch",
     "build": "webpack -d",
     "seed": "mysql -u root < schema.sql -p",

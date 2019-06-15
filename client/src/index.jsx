@@ -20,7 +20,7 @@ class App extends React.Component {
   }
   componentDidMount() {
     $.get({
-      url: 'http://localhost:3050/API/photos/' + this.state.id,
+      url: 'http://127.0.0.1:3060/API/photos/' + this.state.id,
       dataType: 'json',
       success: allPhotos => { 
         allPhotos = allPhotos.rows.map(i=> {
