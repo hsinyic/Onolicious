@@ -6,7 +6,7 @@ const zlib = require('zlib');
 var Duplex = stream.Duplex ||
   require('readable-stream').Duplex;
 
-var a = fs.createWriteStream('test.csv.gz',{encoding: 'utf8'});
+var a = fs.createWriteStream('test.txt',{encoding: 'utf8'});
 
 
 /**
@@ -27,6 +27,7 @@ function DRTimeWLog(options) {
   // every second, add new time string to array
   this.timer = setInterval(addTime, 1000, this.readArr);
 }
+// subclassing.
 util.inherits(DRTimeWLog, Duplex);
 
 /* add new time string to array to read */
@@ -36,6 +37,7 @@ function addTime(readArr) {
 
 DRTimeWLog.prototype._read = function readBytes(n) {
   var self = this;
+  console.log('hi')
   while (this.readArr.length) {
     var chunk = this.readArr.shift();
     if (!self.push(chunk)) {
@@ -60,6 +62,9 @@ DRTimeWLog.prototype.stopTimer = function () {
 /* for write stream just ouptut to stdout */
 DRTimeWLog.prototype._write =
   function (chunk, enc, cb) {
+    chunk.pipe(zlib.createGzip()).pipe(a);
+    // a.write(chunk.toString())
+    // a.write(' \n ')
     console.log('write: ', chunk.toString());
     cb();
   };
@@ -79,7 +84,9 @@ duplex.write('meow');
 duplex.write('hi');
 duplex.write('what');
 duplex.write('sirrrr');
-duplex.end();
+duplex.write('now');
+duplex.write('now again');
+// duplex.end();
 
 // after 3 seconds stop the timer
 setTimeout(function () {

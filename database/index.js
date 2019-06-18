@@ -4,10 +4,16 @@ var pool = new Pool({
     //   user: "yourUser",
     //   password: "yourPass",
     // ssl: true
+    max: 10, // set pool max size to 10
+    min: 1, // set min pool size to 1 
     database: "restaurant",
     port: 5432, 
     host: "localhost",
 });
+
+// plot pool size with RPS record 
+// compile a much smaller bundle.js
+
 
 pool.on('error', (err, client) => {
     console.error('Unexpected error on idle client', err)
