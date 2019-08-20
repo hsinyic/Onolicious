@@ -1,4 +1,4 @@
-# Free Seats
+# Onolicious
 
 > Project description
 
